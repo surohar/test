@@ -1,0 +1,31 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Update Promotion
+{% endblock %}
+
+
+{% block body %}
+
+<main class="bg-cyan-700 w-screen text-center h-screen table">
+    <h1 class="text-white text-3xl">Փոփոխել Ակցիան</h1>
+    <div class="bg-gray-200 w-2/3 h-auto mx-auto mt-36 text-center">
+        <label class="text-black text-xl mt-10 block">Նկարագրություն</label><br>
+        <textarea name="description" id="" cols="100" rows="4" class="bg-cyan-500 text-white text-center">{{promotions.description}}</textarea>
+        <label class="text-black text-xl mt-10 block">Նկար</label>
+        <img class="w-72 h-72 mx-auto" src="{{ url_for('static', filename='uploads/'+promotions.image_name) }}" alt="">
+        <input type="file" name="image" class="bg-cyan-500 mt-5 text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+        <label class="text-black text-xl mt-10 block">Նկարի անուն</label>
+        <input type="text" name="image_name" class="bg-cyan-500 w-96 h-8 mt-5 text-center text-white"><br>
+        <label class="text-black text-xl mt-10 block">Լեզու</label>
+        <select name="language" class="w-60 text-white bg-cyan-600 rounded-3xl h-10 text-center">
+            <option value="armenian">Հայերեն</option>
+            <option value="russian">Ռուսերեն</option>
+            <option value="english">Անգլերեն</option>
+        </select><br>
+        <a href="/admin/update-promotion/update/{{promotions.id}}"><input type="submit" value="Պահպանել" class="mt-20 w-60 h-10 bg-cyan-600 rounded-3xl duration-500 ease-in-out hover:bg-white hover:text-cyan-600 cursor-pointer text-white"></a>
+
+    </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block body %}
+<main class="bg-slate-800 w-screen h-screen table">
+    <div class="mt-36 w-full md:w-2/3 h-1/2 overflow-y-scroll bg-slate-700 mx-auto">
+        <div class="pt-10 block teachers_list">
+            <table class="border-separate table w-full pt-10">
+                <tr class="bg-cyan-500 text-white">
+                    <th>ID</th>
+                    <th>նկար</th>
+                    <th>անուն</th>
+                    <th>լեզու</th>
+                    <th>Կայքի լեզու</th>
+                    <th>Հեռացնել</th>
+                    <th>Փոփոխել</th>
+                </tr>
+                {% for i in teachers_list %}
+                <tr class="bg-cyan-600 text-center text-white">
+                    <td>{{i.id}}</td>
+                    <td>{{i.image_name}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.language}}</td>
+                    <td>{{i.website_language}}</td>
+                    <td class="w-36 bg-rose-600 text-white duration-300 cursor-pointer ease-in-out hover:bg-white hover:text-rose-600"><a href="/admin/remove-teacher/{{i.id}}">հեռացնել</a></td>
+                    <td class="w-36 bg-emerald-600 duration-300 text-white cursor-pointer hover:bg-white hover:text-emerald-600"><a href="/admin/update-teacher/{{i.id}}">փոփոխել</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="w-full h-auto text-center block pt-10 add_teacher">
+            <form action="/admin/add_teacher" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/gif, image/jpeg, image/jpg, image/png" class="bg-cyan-500 text-center text-white">
+                <input type="text" placeholder="Անուն" name="name" class="bg-cyan-500 text-center text-white placeholder:text-slate-200 w-36 h-7">
+                <input type="text" placeholder="Լեզու" name="language" class="bg-cyan-500 text-center text-white placeholder:text-slate-200 w-36 h-7">
+                <select name="website_language" class="bg-cyan-500 text-center text-white placeholder:text-slate-200 w-36 h-7">
+                    <option value="armenian" disabled>Կայքի լեզու</option>
+                    <option value="armenian">Հայերեն</option>
+                    <option value="russian">Ռուսերեն</option>
+                    <option value="english">Անգլերեն</option>
+                </select>
+                <input type="submit" value="Ավելացնել" class="bg-cyan-500 text-center font-bold text-white w-36 h-7 duration-300 ease-in-out hover:text-cyan-500 hover:bg-white cursor-pointer">
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

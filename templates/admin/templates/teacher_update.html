@@ -1,0 +1,28 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Update Teacher Data
+{% endblock %}
+
+{% block body %}
+<main class="bg-slate-800 w-screen h-screen table">
+        <div class="w-full h-auto text-center block pt-10 add_teacher">
+            <form action="/admin/update_teacher/{{teacher_data.id}}" method="POST" enctype="multipart/form-data">
+                <img src="{{ url_for('static', filename='uploads/'+teacher_data.image_name) }}" width="400" class="mx-auto">
+                <input type="file" name="image" accept="image/gif, image/jpeg, image/jpg, image/png" class="bg-cyan-500 text-center text-white"><br>
+                <input type="text" placeholder="{{teacher_data.name}}" name="name" class="bg-cyan-500 text-center mt-10 text-white placeholder:text-slate-200 w-96 h-8"><br>
+                <input type="text" placeholder="{{teacher_data.language}}" name="language" class="bg-cyan-500 text-center mt-5 text-white placeholder:text-slate-200 w-96 h-8"><br>
+                <select name="website_language" class="mt-5 bg-cyan-500 text-center text-white placeholder:text-slate-200 w-72 h-8"><br>
+                    <option value="armenian" disabled>Կայքի լեզու</option>
+                    <option value="armenian">Հայերեն</option>
+                    <option value="russian">Ռուսերեն</option>
+                    <option value="english">Անգլերեն</option>
+                </select><br>
+                <input type="submit" value="Ավելացնել" class="bg-cyan-500 text-center font-bold text-white mt-10 w-36 h-7 duration-300 ease-in-out hover:text-cyan-500 hover:bg-white cursor-pointer">
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

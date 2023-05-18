@@ -1,0 +1,396 @@
+{% extends 'base.html' %}
+
+   {% block body %}
+
+   <main>
+
+    <div class="partner"><img src="{{ url_for('static', filename='images/Գործընկերներ.png') }}"   height="105" alt =""></div>
+
+   
+
+   
+
+    <div class="parentcontair">
+
+      
+      {% for i in partners %}
+    <div class="contair animate-top partners">
+
+        <img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" alt="" width="250px" height="200px" class="image">
+
+        <div class="overlay">
+
+          <div class="text"><h4>{{i.partner_name}}</h4>
+
+          <p>{{i.description}}</p></div>
+
+        </div>
+      </div>
+      {% endfor %}
+
+      <!-- <div class="contair animate-left">
+
+        <img src="{{ url_for('static', filename='images/Group 351.png') }}" alt=""  width="250px" height="200px" class="image">
+
+        <div class="overlay">
+
+          <div class="text"><h4>«ԵՀԽ Հայաստանյան Կլոր Սեղան Հիմնադրամ»   </h4>
+
+            <p>7 տարի համագործակցություն</p> <p>7 իրականացված ծրագիր</p></div>
+
+          </div>
+
+      </div>
+
+      <div class="contair animate-bottom">
+
+        <img src="{{ url_for('static', filename='images/Group 352.png') }}" alt=""  width="250px" height="200px" class="image">
+
+        <div class="overlay">
+
+          <div class="text"><h4>«ՍՕՍ Մանկական Գյուղեր Հայաստան»     </h4>
+
+            <p>8 տարի համագործակցություն</p> <p>17 իրականացված ծրագիր</p></div>
+
+          </div>
+
+      </div>
+
+      <div class="contair animate-right">
+
+        <img src="{{ url_for('static', filename='images/Group 353.png') }}" alt=""  width="250px" height="200px" class="image">
+
+        <div class="overlay">
+
+          <div class="text"><h4>«ԿՌԿ Հայաստան»   </h4>
+
+            <p>8 տարի համագործակցություն</p> <p>7 իրականացված ծրագիր</p></div>
+
+          </div>
+
+      </div></div>
+
+
+
+
+
+      <div class="parentcontair">
+
+        <div class="contair animate-bottom">
+
+            <img src="{{ url_for('static', filename='images/Group 363.png') }}" alt="" width="250px" height="200px" class="image">
+
+            <div class="overlay">
+
+              <div class="text"><h4 id="halep">«ՀԱԼԵՊ ՀԱՅՐԵՆԱԿՑԱԿԱՆ-ԲԱՐԵՍԻՐԱԿԱՆ ՀԱՍԱՐԱԿԱԿԱՆ ԿԱԶՄԱԿԵՐՊՈՒԹՅՈՒՆ»   </h4>
+
+                <p>3 տարի համագործակցություն</p> <p>3 իրականացված ծրագիր</p></div>
+
+              </div>
+
+          </div>
+
+          <div class="contair animate-left">
+
+            <img src="{{ url_for('static', filename='images/Group 364.png') }}" alt=""  width="250px" height="200px" class="image">
+
+            <div class="overlay">
+
+              <div class="text"><h4>«Կանանց Աջակցման Կենտրոն»  </h4>
+
+                <p>8 տարի համագործակցություն</p> <p>10 իրականացված ծրագիր</p></div>
+
+              </div>
+
+          </div>
+
+         
+
+          <div class="contair animate-top">
+
+            <img src="{{ url_for('static', filename='images/Group 365.png') }}" alt=""  width="250px" height="200px" class="image">
+
+            <div class="overlay">
+
+              <div class="text"><h4>«Կարմիր Խաչ»   </h4>
+
+                <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+              </div>
+
+          </div>
+
+          <div class="contair animate-right">
+
+            <img src="{{ url_for('static', filename='images/Group 366.png') }}" alt=""  width="250px" height="200px" class="image">
+
+            <div class="overlay">
+
+              <div class="text"><h4>«Հելփ Հաուս ՍՊԸ»    </h4>
+
+                <p>6 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+              </div>
+
+          </div></div>
+
+          <div class="parentcontair">
+
+            <div class="contair animate-bottom">
+
+                <img src="{{ url_for('static', filename='images/Group 354.png') }}" alt="" width="250px" height="200px" class="image">
+
+                <div class="overlay">
+
+                  <div class="text"><h4>«Ամերիկայի Հայ Ավետարանչական Ընկերակցություն»  </h4>
+
+                    <p>1 տարի համագործակցություն</p> <p>1 իրականացված ծրագիր</p></div>
+
+                  </div>
+
+              </div>
+
+              <div class="contair animate-top">
+
+                <img src="{{ url_for('static', filename='images/Group 355.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                <div class="overlay">
+
+                  <div class="text"><h4>«Հայաստանի Արդյունաբերողների ևվ գործարարների Միություն»  </h4>
+
+                    <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+                </div>
+
+              </div>
+
+              <div class="contair animate-right">
+
+                <img src="{{ url_for('static', filename='images/Group 357.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                <div class="overlay">
+
+                  <div class="text"><h4>«Վորլդ Վիժն» </h4>
+
+                    <p>11 տարի համագործակցություն</p> <p>11 իրականացված ծրագիր</p></div>
+
+                  </div>
+
+              </div>
+
+              <div class="contair animate-left">
+
+                <img src="{{ url_for('static', filename='images/Group 358.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                <div class="overlay">
+
+                  <div class="text"><h4>«Գործընկերություն ևվ Ոսուցում ՀԿ»  </h4>
+
+                    <p>3 տարի համագործակցություն</p> <p>3 իրականացված ծրագիր</p></div>
+
+                  </div>
+
+              </div></div>
+
+             
+
+    
+
+              <div class="parentcontair">
+
+                <div class="contair animate-right">
+
+                    <img src="{{ url_for('static', filename='images/Group 359.png') }}" alt="" width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>«Ֆրանս-Հայկական Զարգացման Հիմնադրամ»   </h4>
+
+                        <p>5 տարի համագործակցություն</p> <p>15 իրականացված ծրագիր</p></div>
+
+                      </div>
+
+                  </div>
+
+                  <div class="contair animate-top">
+
+                    <img src="{{ url_for('static', filename='images/Group 360.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>«Զբաղվածության Պետական Գործակալություն»   </h4>
+
+                        <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+                      </div>
+
+                  </div>
+
+                  <div class="contair animate-left">
+
+                    <img src="{{ url_for('static', filename='images/Group 361.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>«Նիյր Իսթ ֆաունդեյշն»  </h4>
+
+                        <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+                      </div>
+
+                  </div>
+
+                  <div class="contair animate-bottom">
+
+                    <img src="{{ url_for('static', filename='images/Group 362.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>«Իմ Քայլը Հիմնադրամ»    </h4>
+
+                        <p>1 տարի համագործակցություն</p> <p>1 իրականացված ծրագիր</p></div>
+
+                      </div>
+
+                  </div>
+
+                 </div>
+
+                 <div class="parentcontair">
+
+                  <div class="contair animate-right">
+
+                      <img src="{{ url_for('static', filename='images/Group 405.png') }}" alt="" width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>«ՀՈՓ ԲՀԿ ներկայացուցչություն»   </h4>
+
+                          <p>3 տարի համագործակցություն</p> <p>3 իրականացված ծրագիր</p></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contair animate-top">
+
+                      <img src="{{ url_for('static', filename='images/Group 409.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>«Թուֆենկյան Հիմնադրամ»   </h4>
+
+                          <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contair animate-left">
+
+                      <img src="{{ url_for('static', filename='images/Group 401.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>«Փարոս ՀԿ համատեղ Save the Children in Armenia»   </h4>
+
+                          <p>1 տարի համագործակցություն</p> <p>1 իրականացված ծրագիր</p></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contair animate-bottom">
+
+                      <img src="{{ url_for('static', filename='images/Group 402.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>«Սուրբ Երրորդություն Եկեղեցի»   </h4>
+
+                          <p>2 տարի համագործակցություն</p> <p>2 իրականացված ծրագիր</p></div>
+
+                        </div>
+
+                    </div>
+
+                   </div>
+
+            
+
+                   <div class="parentcontair pb">
+
+                    <div class="contair animate-right">
+
+                        <img src="{{ url_for('static', filename='images/Group 403.png') }}" alt="" width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>«ՍՕԱՐ Հայաստան բարեգործական ընկերություն»</h4>
+
+                            <p>3 տարի համագործակցություն <p></p>3 իրականացված ծրագիր</p></div>
+
+                          </div>
+
+                      </div>
+
+                      <div class="contair animate-top">
+
+                        <img src="{{ url_for('static', filename='images/Group 408.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>«Մարդ կարիքի մեջ» </h4>
+
+                            <p>5 տարի համագործակցություն <p></p>11 իրականացված ծրագիր</p></div>
+
+                          </div>
+
+                      </div>
+
+                      <div class="contair animate-left">
+
+                        <img src="{{ url_for('static', filename='images/Group 406.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>ՔՎՈԼԻՖԱՅԴ ՍՄԱՐՏ ԷՍԻՍՏԱՆՑ </h4>
+
+                            <p>4 տարի համագործակցություն <p></p>4 իրականացված ծրագիր</p></div>
+
+                          </div>
+
+                      </div>
+
+                      <div class="contair animate-bottom">
+
+                        <img src="{{ url_for('static', filename='images/Group 407.png') }}" alt=""  width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>«Լեզվի միջազգային և բաց արտասահմանյան դպրոց»  </h4>
+
+                            <p>2 տարի համագործակցություն <p></p>2 իրականացված ծրագիր</p></div>
+
+                          </div>
+
+                      </div>
+
+                     </div> -->
+
+            
+
+                   
+
+                        </div>
+
+                       </div>
+
+                    
+                       {% include 'contact_form_section.html' %}
+
+                    <p id="my-form-status" class="status"></p>
+
+                   </main>
+
+                   {% endblock %}

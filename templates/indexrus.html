@@ -1,0 +1,270 @@
+{% extends 'base_rus.html' %}
+
+
+    {% block body %}
+
+   <main>
+
+     <section class="alllanguages">
+
+        <div class="mainpic"><img   src="{{ url_for('static', filename='uploads/'+main_page_data.image) }}" alt="" class="langauges" ></div>
+
+       
+
+     </section>
+
+
+
+     <section class="aboutus">
+
+        <div class="about">
+
+            <div class="maintexter ">
+
+        <div class="textabout animate-left" >
+
+           <h1 class="weone">О нас</h1></div>
+
+           <div class="abouttext">
+                <p>
+                    {{main_page_data.text}}
+                </p>
+           <br>
+
+           </div>
+
+            <div class="aboutbtns">
+
+               <button class="hayt animate-left" ><a href="formrus.html" >Отправить заявку</a></button>
+
+                <button class="more animate-right"><a href="aboutrus.html" class="showmore">Еще</a></button>
+
+            </div></div>
+
+             
+
+         <div class="aboutpictures">
+
+            <div class="underpics">
+
+                <img class="animate-top" src="{{ url_for('static', filename='images/aboutlang.png') }}" alt=""  height="280px">
+
+                <img  class= "animate-bottom" src="{{ url_for('static', filename='images/aboutbasket.png') }}" alt="" height="280px">
+
+
+
+            </div>
+
+            <div class="aboutgirl">
+
+                <img  class="animate-right" src="{{ url_for('static', filename='images/aboutgirl.png') }}" alt=""  height="280px">
+
+            </div>
+
+         </div>
+
+        </div> 
+
+     </section>
+
+
+
+     <section class="actions">
+
+        <div class="akcianer"><img src="{{ url_for('static', filename='images/Group 472.png') }}" alt=""></div>
+
+     </section>
+
+
+
+     <section>
+
+<div class="lines">
+
+        <div class="lineheader">
+
+            <img   class="lineone" src="{{ url_for('static', filename='images/Line 4.png') }}"  alt="">
+
+            <img class="days daysone"   src="{{ url_for('static', filename='images/daystwo.png') }}" alt="">
+
+            <img   class="linetwo" src="{{ url_for('static', filename='images/Line 4.png') }}" alt="">
+
+        </div>
+
+    </div>
+
+
+
+     <div class="ourdays">
+
+              <div class="aroryaone day">
+
+
+
+<div ><img  src="{{ url_for('static', filename='images/videonone.png') }}" alt=""  class="lessonone" height="350px">
+
+    
+
+    <div class="play animate-left" >
+
+    <p id="hajox">Стартовала новая группа курсов английского языка...</p>
+
+        <a href="englishrus.html">  <button class="view">Еще</button></a></div>
+
+</div>
+
+<div ><img src="{{ url_for('static', filename='images/videotwo.png') }}" class="videotwo" alt="" height="460px"></div>
+
+<div ><img src="{{ url_for('static', filename='images/videothree.png') }}"  alt="" class="lessonthree" height="350px"  >
+
+  
+
+    <div class="play animate-right" >
+
+        <p>12 сентября состоится открытый урок французского языка...</p>
+
+       <a href="franchrus.html"> <button class="view ">Еще</button></a></div>
+
+    </div>
+
+
+
+
+
+</div>
+
+              
+
+
+
+
+
+
+
+</div>
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              <div class="aroryaone aroryatwo day">
+
+                <div><img src="{{ url_for('static', filename='images/videofour.png') }}" class="videofour" height="430px" alt=""></div>
+
+                <div ><img src="{{ url_for('static', filename='images/videofive.png') }}" height="350px" alt=""  class="lessonthree">
+
+                    
+
+                    <div class="play playtwo">
+
+                    <p>Очередной курс в Art House подходит к концу...</p>
+
+                    <a href="aboutrus.html"><button class="view viewtwo">Еще</button></a></div>
+
+                </div>
+
+                <div><img src="{{ url_for('static', filename='images/videosix.png') }}" height="430px" alt="" class="videosix"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    
+
+
+
+    <section class="students">
+
+<div  class="opinionof"> <img class="opt" src="{{ url_for('static', filename='images/opinionrus.png') }}" height="150px" alt="">
+
+<img class="liner"  src="{{ url_for('static', filename='images/Line 2.png') }}" height="5px"  alt=""></div>
+
+<div class="maindivtwo">
+
+<div class="spiner">
+
+
+
+<div class="word"><p class="texts"></p></div>
+
+<div class="book"><img src ="{{ url_for('static', filename='images/paperandpen.png') }}"  height="300px" width="400px" alt=""></div>
+
+
+
+
+
+
+
+      
+
+
+
+ 
+
+<div id="drag-container">
+
+ 
+
+  <div id="spin-container" >
+
+   
+
+    <img src="{{ url_for('static', filename='images/child7.jpg') }}" height="180px"alt=""  >
+
+    <img src="{{ url_for('static', filename='images/child2.jpg') }}"style="height: 180px"  alt="">
+
+    <img src="{{ url_for('static', filename='images/child3.jpg') }}"  style="height: 180px"alt="">
+
+    <img src="{{ url_for('static', filename='images/child4.jpg') }}"  style="height: 180px"alt="" >
+
+    <img src="{{ url_for('static', filename='images/child5.jpg') }}"  style="height: 180px" alt="" >
+
+    <img src="{{ url_for('static', filename='images/chin1.jpg') }}" style="height: 180px" alt=""  >
+
+    <img src="{{ url_for('static', filename='images/child1.jpg') }}" style="height: 180px" ></div>
+
+
+
+
+
+</div>
+
+  <div id="ground"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+ </section>
+
+
+
+     
+
+ {% include 'contact_form_section_rus.html' %}
+
+    <p id="my-form-status" class="status"></p>
+
+   </main>
+
+   {% endblock %}

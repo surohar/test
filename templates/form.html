@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+
+    <title>Art House language center</title>
+
+</head>
+
+<body scroll="no">
+
+   <header id="topheader">
+
+    <div class="header animate-left">
+
+         <div class="flags"><a href="/form-armenian"><img  class="flagone" src="{{ url_for('static', filename='images/flag1 (2).png') }}"  width="139 px" height ="172px"alt="" id="flone" ></a>
+
+            <a href="/test-armenian"><img  class="flagtwo" src="{{ url_for('static', filename='images/flag3.png') }}"  width="139 px" height ="172px" alt=""></a>
+
+        </div>
+
+        <div class="logo animate-bottom">
+
+            <a href="/home"> <img src="{{ url_for('static', filename='images/logo.png') }}" width="255px" height="80px" alt=""> </a>
+
+        </div>
+
+        <div id='select-container' class="animate-right ">
+
+            <select id="dropdown" onchange="location = this.value;">
+
+             
+
+             <option   id="optone" value='/home' selected >ARMENIAN</option>
+
+             <option   value="/home-eng"  id="opttwo" ><a href="/form-english"></a>ENGLISH</a></option>
+
+                <option value="/home-rus" id="optthree">RUSSIAN</option>
+
+        
+
+            </select>
+
+            <img id='dropdown-image'  src="{{ url_for('static', filename='images/globus.png') }}" />
+
+          </div>
+
+    </div>
+
+    </div>
+
+
+
+    <div class="wrapper effect">
+
+
+
+        <ul class="snip1175" >
+
+            
+
+            <li><a href="/about-armenian" data-hover="Մեր մասին" id="ourone">Մեր մասին</a></li>
+
+            <li><a href="/languages-armenian" data-hover="Լեզուներ" id="ourtwo">Լեզուներ</a></li>
+
+            <li><a href="/action-armenian" data-hover="Ակցիաներ" id="ourthree">Ակցիաներ</a></li>
+
+            <li><a href="/prices-armenian" data-hover="Գնացուցակ" id="ourfour">Գնացուցակ</a></li>
+
+            <li><a href="/partners-armenian" data-hover="Գործընկերներ" id="ourfive">Գործընկերներ</a></li>
+
+          </ul>
+
+       
+
+      </div>
+
+     
+
+      <div id="hidemenu">
+
+        <span ><img src="{{ url_for('static', filename='images/Group 519.png') }}" alt="" class="responsiveburg " width="40px" height="30px"  onclick="openNav()"> </span>
+
+<div id="myNav" class="overon">
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="{{ url_for('static', filename='images/Group 520.png') }}" alt="" class="responsiveburg" width="40px" height="30px"></a>
+
+<div class="overon-content">
+
+    <a href="/home"><img src="{{ url_for('static', filename='images/logo.png') }}"class="mobilelogo" alt=""></a>
+
+  <a href="/about-armenian"><img src="{{ url_for('static', filename='images/Group 518.png') }}"  width="400px" height="70px" alt="" id="imgone"></a>
+
+  <a href="/languages-armenian"><img src="{{ url_for('static', filename='images/Group 513.png') }}"  width="400px" height="70px" id="imgtwo"  alt=""></a>
+
+  <a href="/action-armenian"><img src="{{ url_for('static', filename='images/Group 517.png') }}" width="400px" height="70px" id="imgthree"  alt=""></a>
+
+
+
+  <a href="/prices-armenian"><img src="{{ url_for('static', filename='images/Group 514.png') }}"  width="400px" height="70px" id="imgfour" alt="" ></a>
+
+  <a href="/partners-armenian"><img src="{{ url_for('static', filename='images/Group 515.png') }}" width="400px" height="70px" id="imgfive" alt="" ></a>
+
+</div>
+
+
+
+</div>
+
+        
+
+        </div>
+
+   </header>
+
+   <main>
+
+ 
+
+    <section class="formsend">
+
+     
+
+        <div class="arrowright">
+
+            <img src="{{ url_for('static', filename='images/Group 437.png') }}" width="600px" height="200px" alt="" class="right">
+
+            <img src="{{ url_for('static', filename='images/smtwo.png') }}" width="180px" height="180px" alt="" class="smallmes">
+
+
+
+
+
+        </div>
+
+       
+
+        <div id="forms">
+
+        
+
+            <form id="my-form" class="my-forma" action="https://formspree.io/f/xzbwkony" method="POST">
+
+                <div class="hayter"> <h2>ՈՒՂԱՐԿԵԼ ՀԱՅՏ</h2></div>
+
+               <div class="namephone">
+
+                <label></label><input type="text" name="name" placeholder="Անուն ">
+
+                <label> </label><input type="phone" name="phone"  placeholder="Հեռախոսահամար">
+
+            
+
+            
+
+            
+
+            </div> 
+
+                
+
+               <div class="surnamemail">
+
+               <label></label><input type="text" name ="surname" placeholder ="Ազգանուն">
+
+                <label></label><input type="email" name="mail" placeholder="Email">
+
+    
+
+            </div>
+
+            <div class="selectgroups">
+
+               
+
+               <div class="custom-select">
+
+                <select class="select new-select" name="lang" id="choose" >
+
+                    <option >Ընտրել դասընթացը</option>
+
+                    <option value="Անգլերեն" >Անգլերեն</option>
+
+                    <option value="Գերմաներեն">Գերմաներեն</option>
+
+                    <option value="Չինարեն">Չինարեն</option>
+
+                    <option value="Ֆրանսերեն">Ֆրանսերեն</option>
+
+                    <option value="Ռուսերեն">Ռուսերեն</option>
+
+                    <option value="Իտալերեն">Իտալերեն</option>
+
+                    <option value="Իսպաներեն">Իսպաներեն</option>
+
+                </select></div>
+
+                <div class="custom-select">
+
+                <select class="select" name="quantity" id="choosethree">
+
+                    <option disabled >Դասերի քանակը</option>
+
+                    <option value="3days" name="3">Շաբաթական 3 օր </option>
+
+                    <option value="2days" name="2">Շաբաթական 2 օր </option>
+
+                </select></div>
+
+                <div class="custom-select">
+
+                <select class="select selectleft" class="duration" name="lessontime" id="choosetwo">
+
+                    <option  disabled name="tevox" ></option>
+
+                    <option value="Individual">Անհատական </option>
+
+                    <option value="">Խմբային  </option>
+
+                </select></div>
+
+               </div>
+
+                <input type="submit" id="my-form-button" value="Ուղարկել"  class="view send">
+
+                <p id="my-form-status"></p>
+
+            </form>
+
+            <div class="leftarrow">
+
+                <img src="{{ url_for('static', filename='images/smone.png') }}" width="130px" height="130px" alt="" class="smallmestwo">
+
+                <img src="{{ url_for('static', filename='images/Group 438.png') }}" width="120px" height="100px"  alt="" class="left">
+
+                    </div>
+
+        </div>
+
+    
+
+        
+
+    
+
+    </section>
+
+    
+
+<!-- GetButton.io widget -->
+
+<script type="text/javascript">
+
+    (function () {
+
+        var options = {
+
+            facebook: "193801524296214", // Facebook page ID
+
+            whatsapp: "+374 77 200408", // WhatsApp number
+
+            call_to_action: "Message us", // Call to action
+
+            button_color: "#129BF4", // Color of button
+
+            position: "right", // Position may be 'right' or 'left'
+
+            order: "facebook,whatsapp", // Order of buttons
+
+        };
+
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+
+    })();
+
+    
+
+</script>
+
+<!-- /GetButton.io widget -->
+
+
+
+    <footer style="margin-bottom:-150px" class="f">
+
+        <div class="footer">
+
+        <div class="footerlogo"><img src="{{ url_for('static', filename='images/logo.png') }}"  height="80px" alt=""></div>
+
+        <div class="hasce" ><p class="adress">Аbovyan St. 33, 0009, Armenia +37443543455</p>
+
+        <p class="date">2022 ART HOUSE</p></div>
+
+        <div class="iconki">
+
+          <a href="mailto:arthouselanguage@gmail.com"> <img src="{{ url_for('static', filename='images/message.png') }}"  height="22px"  alt="" ></a> 
+
+          <a   href="https://www.instagram.com/art_house_language/" target="_blank"> <img src="{{ url_for('static', filename='images/instagram.png') }}"  height="22px" id ="b" alt="" ></a>
+
+            <a   href="https://www.facebook.com/AnglerenRuserenGermanerenFranserenIspaneren" target="_blank"> <img src="{{ url_for('static', filename='images/facebook.png') }}"  height="22px" id ="c" alt="" ></a>
+
+        </div>
+
+    </div>
+
+    <section class="topsection">
+
+        <div class="arrowtotop"><a href="#topheader"><img src="{{ url_for('static', filename='images/arrowupp.png') }}" alt=""></a></div>
+
+
+
+    </section>
+
+       </footer>
+
+   
+
+   
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://tympanus.net/Development/Slicebox/js/jquery.slicebox.js"></script>
+
+ 
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://kit.fontawesome.com/9a1fc58522.js" crossorigin="anonymous"></script>
+
+ 
+
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/error.js') }}"></script>
+
+</body></html>

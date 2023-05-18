@@ -1,0 +1,70 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Admin Panel Dashboard
+{% endblock %}
+
+{% block body %}
+
+<main class="md:w-full w-screen h-screen bg-gray-200 md:mt-0 md:pt-10 pt-20 table">
+    <div class="table h-auto w-auto ml-10 md:ml-96 mt-10">
+        <h1 class="flex md:text-5xl text-3xl text-cyan-600 font-semibold">Dashboard</h1>
+    </div>
+    <div class="block mt-5 md:pt-5 h-auto w-screen md:w-auto md:w-9/12 md:ml-10 ml-0 md:ml-96 md:mt-10 bg-none md:bg-cyan-500">
+        <div class="inline-block w-screen md:w-96 h-52 md:h-60 bg-cyan-600 md:ml-10 ">
+            <label class="inline float-left ml-10 text-xl md:text-2xl text-white font-bold underline">Content</label>
+            <label class="inline float-right mr-10 text-xl md:text-2xl text-white font-bold underline">Total</label><br>
+            <div class="md:inline-block inline float-right pt-5 w-auto h-auto">
+                <label class="md:block block text-white text-xl md:ml-22">{{partners_len}}</label>
+                <label class="md:block block text-white mt-3 text-xl md:ml-22">{{promotion_len}}</label>
+                <label class="md:block block text-white mt-3 text-xl md:ml-22">{{tests_len}}</label>
+            </div>
+            <div class="md:inline-block inline w-auto h-auto">
+                <label class="block mt-5 ml-5 md:ml-10 text-white text-xl"><i class="fa-solid fa-handshake pt-1"></i>Գործընկերներ</label>
+                <label class="block ml-5 md:ml-10 text-white text-xl mt-3"><i class="fa-solid fa-basket-shopping pt-1"></i>Ակցիաներ</label>
+                <label class="block ml-5 md:ml-10 text-white text-xl mt-3"><i class="fa-solid fa-file pt-1"></i>Թեստեր</label><br>
+            </div>
+        </div>
+
+
+        <div class="block md:w-96 w-screen md:mt-0 mt-10 h-60 bg-cyan-600  md:mr-96 md:float-right">
+            <i class="fa-solid fa-envelopes-bulk float-left text-3xl text-white p-2"></i>
+            <h1 class="text-white text-3xl pt-1">Վերջին նամակները</h1>
+            <div class="w-72 text-center h-40 bg-cyan-500 ml-12 mt-5 pt-5">
+                <label class="text-white text-xl">from: example@site.com</label><br>
+                <a href="#"><button class="text-white text-xl bg-cyan-600 w-52 h-8 duration-500 hover:bg-white hover:text-cyan-600 ease-in-out">Տեսնել</button></a>
+                <hr class="mt-2 w-52 ml-10">
+                <label class="text-white text-xl">from: example@site.com</label><br>
+                <a href="#"><button class="text-white text-xl bg-cyan-600 w-52 h-8 duration-500 hover:bg-white hover:text-cyan-600 ease-in-out">Տեսնել</button></a>
+            </div>
+        </div>
+
+        <div class="block md:w-96 w-screen mt-10 h-60 bg-cyan-600 md:mr-96 md:float-right md:mt-10">
+            <i class="fa-solid fa-map float-left text-3xl text-white p-2"></i>
+            <h1 class="text-white text-3xl pt-1">Քարտեզ</h1>
+            <div class="w-72 text-center h-40 bg-cyan-500 ml-12 mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.95754326336!2d44.51842919038557!3d40.18775829601004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd774d585c29%3A0x53ad62573447f18d!2zQXJ0IEhvdXNlINS81aXVptW-1asg1a_VpdW21b_WgNW41bY!5e0!3m2!1sen!2sam!4v1682767858316!5m2!1sen!2sam" width="300" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+        <div class="block md:w-96 w-screen h-60 bg-cyan-600 mt-10 md:ml-10 md:mt-10">
+            <i class="fa-solid fa-chart-simple float-left p-2 text-white text-3xl"></i>
+            <h1 class="text-white text-3xl pt-1">Թեստեր</h1>
+            <div class="text-center">
+                <h1 class="text-white font-semibold text-2xl mt-10">Ավելացրու թեստ</h1>
+                <a href="#"><button class="mt-10 w-72 bg-cyan-500 h-10 text-white rounded-3xl duration-500 ease-in-out hover:bg-white hover:text-cyan-500">Ավելացնել</button></a>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+<footer class="block w-full h-auto md:h-36 bg-gray-800 text-center">
+    <h1 class="text-2xl text-white font-bold">Կայքի կարգավորումներ</h1>
+    <a href="#"><button class="text-white w-52 h-10 bg-cyan-500 rounded-3xl mt-10 duration-500 ease-in-out hover:bg-white hover:text-cyan-500">Այցելել կայք</button></a>
+    <a href="#"><button class="text-white w-52 h-10 bg-cyan-500 rounded-3xl mt-10 duration-500 ease-in-out hover:bg-white hover:text-cyan-500">Կարգավորումներ</button></a>
+</footer>
+
+{% endblock %}

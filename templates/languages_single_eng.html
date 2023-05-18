@@ -1,0 +1,58 @@
+{% extends 'base_eng.html' %}
+
+
+{% block body %}
+
+<main>
+
+    <div  class="englishgroup">
+
+        <div class="english animate-left ">
+
+             <img src="{{url_for('static', filename='uploads/'+language.main_image)}}" height="700px" alt="" >
+
+        </div > 
+
+        <div class="engtext animate-right">
+
+<p>{{language.main_text}}</p>
+
+        </div>
+
+    </div>
+
+<section class="pictures">
+
+    <div class="aroryaone ">
+
+        <div><img src="{{url_for('static', filename='uploads/'+language.image1)}}"      alt=""  height="350px"></div>
+
+        <div class="picsecond"><img src="{{url_for('static', filename='uploads/'+language.image2)}}"  alt="" height="430px" ></div>
+
+        <div><img src="{{url_for('static', filename='uploads/'+language.image3)}}"  height="350px" ></div>
+
+    </div>
+
+    <div class="aroryaone bd">
+
+        <div><img src="{{url_for('static', filename='uploads/'+language.image4)}}"  height="450px"    alt=""></div>
+
+        <div class="margpic" ><img src="{{url_for('static', filename='uploads/'+language.image5)}}"   height="390px"  id="margpic" alt=""></div>
+
+        <div><img src="{{url_for('static', filename='uploads/'+language.image6)}}"  height="450px" alt="" ></div>
+
+    </div>
+
+    <div class="fullpic animate-right">
+
+        <img src="{{url_for('static', filename='uploads/'+language.big_image)}}" height="570" alt="">
+
+    </div></section>
+
+    {% include 'contact_form_section_eng.html' %}
+
+    <p id="my-form-status" class="status"></p>
+
+   </main>
+
+{% endblock %}

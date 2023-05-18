@@ -1,0 +1,181 @@
+{% extends 'base_eng.html' %}
+
+       {% block body %}
+
+   <main>
+
+   <section class="aboutus">
+
+    <div class="about">
+
+        <div class="maintextertwo ">
+
+    <div class="textabout animate-left" >
+
+      <h1  class="we wetwo">About Us</h1>
+
+      <div class="abouttext abouttexttwo "><p>Welcome to Art House Language Center!!!</p>
+
+        <p>Since 2009, we have been teaching foreign languages ​​for different age groups, improving and developing new, interactive methods, trying to provide basic knowledge as easily and quickly as possible, from conversational to technical, professional level or, as necessary, preparation and support for various international exams: in short terms.</p><br>
+
+       <p> Whether you will choose an individual or a group option, it doesn't matter, you will get a special approach from our high-class specialists, who with their years of work experience and knowledge will satisfy even the most capricious student, and the result will be the key to your success. Isn't knowing a foreign language? multiplies opportunities and success, provides professional advancement.</p><br>
+
+       <p>By opting for the Art House Language Center, you will have:<br>
+
+        1. Experienced teachers<br>
+
+        2. Individual approach: possibility to learn in small groups, as well as in a family package<br>
+
+        3. Price-quality combination<br>
+
+        4. Free first class option and online and offline version</p><br>
+
+        <p>Become competitive in any field by improving your foreign language skills at the Art House Language Center!!!</p><br>
+
+       </div>
+
+        <div class="pass">
+
+          
+
+            <button class="more animate-right"><a href="testeng.html" class="showmore ">Pass the test</a></button>
+
+        </div></div>
+
+         
+
+    
+
+ </section>
+
+
+
+
+
+ <section class="team teamtwo">
+
+    {% for i in teachers_list %}
+    <div class="teachers teachersone">
+
+        <div class="containerer">
+
+<div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" width="300px" height="380px" alt="">
+
+</div>     </div>     </div>    
+
+<div class="slide slide2"><div class="content"> <h3>{{i.name}}</h3> <p>{{i.language}}</p> </div>
+
+</div></div></div></div>
+{% endfor %}
+
+<!--<div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachertwo.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3>Arpine Voskanyan</h3><p>english</p>
+
+</div></div></div></div>
+
+<div class="containerer"> <div class="card"> <div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherthree.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"> <div class="content"><h3>  Gayane Geolecyan</h3> <p>russian</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherfour.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3>Lilit Arzumanyan</h3> <p>english</p>
+
+</div></div></div></div></div>
+
+<div class="teachers"><div class="containerer">  <div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachereight.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3> Elena Epreyan</h3> <p>chinese</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherfive.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"><h3> Mayranush Eloyan </h3> <p>german</p>
+
+</div> </div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachersix.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"><h3>     Sara Salumyan</h3> <p>english</p> </div></div> </div>
+
+</div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"><img src="{{ url_for('static', filename='images/teacherseven.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div> </div>
+
+<div class="slide slide2"><div class="content"><h3>Tigranuhi Boyajyan </h3> <p>english</p>
+
+</div></div> </div></div></div>
+
+<div class="teachers">
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachernine.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div><div class="slide slide2"><div class="content"> <h3> Edita Shahinyan</h3> <p>italian</p>
+
+</div></div> </div> </div> <div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"><img src="{{ url_for('static', filename='images/teacherten.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"> <h3>Tamara Galstyan </h3> <p>spanish</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"> <img src="{{ url_for('static', filename='images/teachereleven.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div> </div>
+
+<div class="slide slide2"><div class="content"><h3> Lusine Ashkaryan </h3> <p>english</p>
+
+</div> </div> </div></div>
+
+<div class="containerer"> <div class="card"><div class="slide slide1"> <div class="content"> <div class="icon"> <img src="{{ url_for('static', filename='images/teachertwelve.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div> </div>
+
+<div class="slide slide2"> <div class="content"> <h3>  Nune Xazhakyan </h3>  <p>franch</p></div>
+
+</div></div></div></div> -->
+
+
+
+</section>
+
+
+
+<section class="videos">
+
+<div class="animate-left"><iframe width="560" height="315" src="https://www.youtube.com/embed/IY_FDy4y2fM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<div class="animate-right"><iframe width="560" height="315" src="https://www.youtube.com/embed/TINCEHV-z-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
+
+
+
+    </section>
+
+    {% include 'contact_form_section_eng.html' %}
+
+    <p id="my-form-status" class="status"></p>
+
+   </main>
+
+   {% endblock %}

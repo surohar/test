@@ -1,0 +1,66 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Promotions
+{% endblock %}
+
+{% block body %}
+
+<div class="add_promotion_popup hidden w-full h-full absolute bg-slate-700/60 justify-center items-center">
+    <div class="text-center add_promotion_popup_content overflow-y-scroll md:h-2/3 md:w-1/2 w-96 h-96 bg-cyan-600 rounded-xl">
+        <i class="fa-regular close_promotion_popup fa-circle-xmark text-white text-2xl float-left m-2 flex duration-500 ease-in-out  hover:text-cyan-500 fixed"></i>
+        <h1 class="text-white font-semibold text-3xl">Ավելացնել ակցիա</h1>
+        <form action="/admin/add_promotion" method="POST" enctype="multipart/form-data">
+            <label class="text-white block text-xl mt-10">Նկարագրություն</label>
+            <textarea cols="30" name="description" rows="10" class="bg-cyan-500 text-center text-white"></textarea><br>
+            <label class="text-white text-xl mt-10 block">Նկար</label>
+            <input type="file" name="image" class="bg-cyan-500 mt-5 text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white text-xl mt-10 block">Նկարի անուն</label>
+            <input type="text" name="image_name" class="bg-cyan-500 w-52 h-8 mt-5 text-center text-white"><br>
+            <label class="text-white text-xl mt-10 block">Լեզու</label>
+            <select name="language" class="w-60 text-cyan-600 rounded-3xl h-10 text-center">
+                <option value="armenian">Հայերեն</option>
+                <option value="russian">Ռուսերեն</option>
+                <option value="english">Անգլերեն</option>
+            </select><br>
+            <input type="submit" class="w-72 h-10 mt-20 text-white bg-cyan-700 duration-500 ease-in-out hover:bg-white hover:text-cyan-600 rounded-3xl" value="Ավելացնել">
+        </form>
+    </div>
+</div>
+
+<main class="table bg-gray-300 w-screen  md:text-center h-screen">
+    <a href="#" id="add_promotion"><button class="add_promotion_popup_btn block mt-24 md:mt-10 w-72 h-10 bg-cyan-600 text-white ml-20 md:ml-96 rounded-3xl duration-500 ease-in-out hover:text-cyan-600 hover:bg-white"><i class="fa-solid fa-circle-plus float-left ml-5 pt-1"></i>Ավելացնել ակցիա</button></a>
+    <h1 class="md:text-5xl text-3xl text-cyan-600 font-semibold mt-5 ml-10 md:ml-0 block">Ակցիաներ</h1>
+    <div class="block bg-cyan-600 w-screen md:w-8/12 h-4/6 ml-0 md:ml-96 mt-10 md:mt-20 pt-16 overflow-y-scroll">
+        {% for i in promotions %}
+        <div class="bg-cyan-700 md:w-6/12 w-screen h-96 mt-10 ml-0 md:ml-32 table">
+            <h1 class="text-white">{{i.language}}</h1>
+            <div class="w-60 h-36 bg-cyan-600 inline-block ml-20 text-center md:ml-1 mt-10 pt-10 scroll-smooth overflow-y-scroll">
+                <h1 class="text-white text-xl">Նկարագրություն</h1>
+            </div>
+            <div class="w-60 h-36 bg-cyan-600 inline-block ml-20 text-center md:ml-10 mt-10 scroll-smooth overflow-y-scroll">
+                <img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" class="w-full h-72">
+            </div>
+            <div class="md:mt-20 mt-10 text-center">
+                <a href="/admin/update-promotion/{{i.id}}"><button class="md:w-36 w-24 rounded-3xl h-8 bg-emerald-500 text-sm md:text-mg text-white duration-500 ease-in-out hover:bg-white hover:text-emerald-500">Թարմացնել</button></a>
+                <a href="/admin/remove-promotion/{{i.id}}"><button class="md:w-36 h-8 w-24 bg-red-700 text-white rounded-3xl text-sm md:text-mg duration-500 ease-in-out hover:bg-white hover:text-red-700">Հեռացնել</button></a>
+                <a href="/action-{{i.language}}"><button class="md:w-36 h-8 w-24 bg-sky-500 text-white rounded-3xl text-sm md:text-mg duration-500 ease-in-out hover:bg-white hover:text-sky-500">Դիտել</button></a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</main>
+
+<script>
+document.getElementById('add_promotion').addEventListener('click', function() {
+    document.querySelector('.add_promotion_popup').style.display='flex';
+});
+
+document.querySelector('.close_promotion_popup').addEventListener('click', function(){
+    document.querySelector('.add_promotion_popup').style.display='none';
+})
+
+</script>
+
+{% endblock %}

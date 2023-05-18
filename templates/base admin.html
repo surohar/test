@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/b667b42482.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/admin_script.js')}}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="fixed md:bg-cyan-500 bg-none h-auto w-screen block md:w-72 md:h-screen">
+        <div class="md:flex flex justify-between md:justify-between items-center md:items-center md:w-72 w-screen h-20 bg-gray-700">
+            <b class="md:container mx-auto text-2xl md:text-3xl font-bold md:pt-5 table text-white"><i class="fa-solid fa-square-poll-vertical md:pl-10"></i> Admin Panel</b>
+            <span class="text-3xl mr-10 text-white md:hidden cursor-pointer">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+    
+            <ul class="hidden text-center bg-cyan-500 mt-[-96] transition-all ease-in duration-500 md:pt-20 pt-5 md:block">
+                <li class="hover:bg-gray-600 h-10 duration-300 pt-1 ease-in-out">
+                    <a class="text-slate-200 cursor-pointer pt-1 text-xl" href="/admin/dashboard"><i class="fa-solid fa-house float-left pt-1 pl-10"></i>Գլխավոր էջ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a class="pt-1 cursor-pointer text-slate-200 text-xl" href="/admin/promotions"><i class="fa-solid fa-basket-shopping float-left pt-1 pl-10"></i>Ակցիաներ</a>
+                </li>
+                <li class="hover:bg-gray-600 pt-1 h-10 duration-300 ease-in-out">
+                    <a href="/admin/pricelist" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-wallet float-left pt-1 pl-10"></i>Գնացուցակ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/co-workers" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-handshake float-left pt-1 pl-10"></i>Գործընկերներ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/portfolio" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-briefcase float-left pt-1 pl-10"></i>Պորտֆոլիո</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/tests" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-file float-left pt-1 pl-10"></i>Թեստեր</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/mail" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-envelopes-bulk float-left pt-1 pl-10"></i>Փոստարկղ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="#" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-cart-shopping float-left pt-1 pl-10"></i>Ապրանքներ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/languages" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-language float-left pt-1 pl-10"></i>Լեզուներ</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/about" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-address-card float-left pt-1 pl-10"></i>Մեր մասին</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/users" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-users float-left pt-1 pl-10"></i>Օգտատերեր</a>
+                </li>
+                <li class="hover:bg-gray-600 h-10 duration-300 ease-in-out pt-1">
+                    <a href="/admin/settings" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-gear float-left pt-1 pl-10"></i>Կարգավորում</a>
+                </li>
+                <li class="pt-1 md:mt-20 mt-10 cursor-pointer bg-red-600 text-slate-200 hover:bg-gray-600 h-10 duration-300 ease-in-out text-xl">
+                    <a href="/admin-panel" class="pt-1 mt-2 cursor-pointer text-slate-200 text-xl"><i class="fa-solid fa-right-from-bracket float-left pt-1 pl-10"></i>Դուրս գալ</a>
+                </li>
+            </ul>
+    
+    </div>
+
+{% block body %}{% endblock %}
+</body>
+</html>

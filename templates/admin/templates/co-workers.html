@@ -1,0 +1,67 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+CO-Workers
+{% endblock %}
+
+{% block body %}
+<div class="add_promotion_popup hidden w-full h-full absolute bg-slate-700/60 justify-center items-center">
+    <div class="text-center add_promotion_popup_content overflow-y-scroll h-2/3 w-1/2 bg-cyan-600 rounded-xl">
+        <i class="fa-regular close_promotion_popup fa-circle-xmark text-white text-2xl float-left m-2 flex duration-500 ease-in-out  hover:text-cyan-500 fixed"></i>
+        <h1 class="text-white font-semibold text-3xl">Ավելացնել գործընկեր</h1>
+        <form action="/admin/co-workers/add" method="POST" enctype="multipart/form-data">
+            <label class="text-white block text-xl mt-10">Կազմակերպություն</label>
+            <input name="partner_name" class="bg-cyan-500 text-center text-white w-72 h-8"><br>
+            <label class="text-white block text-xl mt-10">Նկարագրություն</label>
+            <textarea cols="30" name="description" rows="10" class="bg-cyan-500 text-center text-white"></textarea><br>
+            <label class="text-white text-xl mt-10 block">Նկար</label>
+            <input type="file" name="image" class="bg-cyan-500 mt-5 text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white text-xl mt-10 block">Նկարի անուն</label>
+            <input type="text" name="image_name" class="bg-cyan-500 w-72 h-8 mt-5 text-center text-white"><br>
+            <label class="text-white text-xl mt-10 block">Լեզու</label>
+            <select name="language" class="w-60 text-cyan-600 rounded-3xl h-10 text-center">
+                <option value="armenian">Հայերեն</option>
+                <option value="russian">Ռուսերեն</option>
+                <option value="english">Անգլերեն</option>
+            </select><br>
+            <input type="submit" class="w-72 h-10 mt-20 text-white bg-cyan-700 duration-500 ease-in-out hover:bg-white hover:text-cyan-600 rounded-3xl" value="Ավելացնել">
+        </form>
+    </div>
+</div>
+
+<main class="table bg-gray-300 w-screen text-center h-screen">
+    <a href="#" id="add_promotion"><button class="add_promotion_popup_btn block md:mt-10 w-72 h-10 bg-cyan-600 text-white mt-24 ml-2 md:ml-96 rounded-3xl duration-500 ease-in-out hover:text-cyan-600 hover:bg-white"><i class="fa-solid fa-circle-plus float-left ml-5 pt-1"></i>Ավելացնել գործընկեր</button></a>
+    <h1 class="text-5xl text-cyan-600 font-semibold md:mt-5 mt-10 flex md:block">Գործընկերներ</h1>
+    <div class="block bg-cyan-600 md:w-8/12 w-full h-1/2 md:h-4/6 md:ml-96 mt-10 md:mt-20 pt-16 overflow-y-scroll">
+        {% for i in co_workers %}
+        <div class="bg-cyan-700 w-full md:w-6/12 h-96 md:mt-10 ml-0 mt-5 md:ml-32 table">
+            <h1 class="text-white text-xl">{{i.language}}</h1>
+            <div class="w-60 h-36 bg-cyan-600 inline-block ml-1 mt-10 pt-10 scroll-smooth overflow-y-scroll">
+                <h1 class="text-white text-xl">{{i.description}}</h1>
+            </div>
+            <div class="w-60 h-36 bg-cyan-600 inline-block ml-10 mt-10 scroll-smooth overflow-y-scroll">
+                <img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" class="w-60 h-60">
+            </div>
+            <div class="mt-20">
+                <a href="#" id="edit_promotion"><button class="w-36 rounded-3xl h-8 bg-emerald-500 text-white duration-500 ease-in-out hover:bg-white hover:text-emerald-500">Թարմացնել</button></a>
+                <a href=""><button class="w-36 h-8 bg-red-700 text-white rounded-3xl duration-500 ease-in-out hover:bg-white hover:text-red-700">Հեռացնել</button></a>
+                <a href=""><button class="w-36 h-8 bg-sky-500 text-white rounded-3xl duration-500 ease-in-out hover:bg-white hover:text-sky-500">Դիտել</button></a>
+            </div>
+        </div> 
+        {% endfor %}
+
+    </div>
+</main>
+
+
+<script>
+document.getElementById('add_promotion').addEventListener('click', function() {
+    document.querySelector('.add_promotion_popup').style.display='flex';
+});
+
+document.querySelector('.close_promotion_popup').addEventListener('click', function(){
+    document.querySelector('.add_promotion_popup').style.display='none';
+})
+
+</script>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Languages
+{% endblock %}
+
+{% block body %}
+
+<div class="add_language_popup hidden w-full h-full absolute bg-slate-700/60 justify-center items-center">
+    <div class="text-center add_promotion_popup_content overflow-y-scroll md:h-2/3 md:w-1/2 w-96 h-96 bg-cyan-600 rounded-xl">
+        <i class="fa-regular close_language_popup fa-circle-xmark text-white text-2xl float-left m-2 flex duration-500 ease-in-out  hover:text-cyan-500 fixed"></i>
+        <h1 class="text-white font-semibold text-3xl">Ավելացնել լեզու</h1>
+        <form action="/admin/add_language" method="POST" enctype="multipart/form-data">
+            <label class="text-white font-semibold text-xl mt-20 block">Լեզվի անուն</label>
+            <input type="text" class="bg-cyan-500 border-2 border-white text-white text-center w-72 h-8" name="language_name">
+            <label class="text-white font-semibold text-xl mt-5 block">Գլխավոր նկար</label>
+            <input type="file" name="main_image" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl pt-5 block">Տեքստ</label>
+            <textarea name="text" class="w-72 h-36 text-white bg-cyan-500 text-center duration-300 ease-in-out rounded-none focus:rounded-3xl focus:bg-white focus:text-cyan-500 focus:w-96 focus:h-52"></textarea>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 1</label>
+            <input type="file" name="image1" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 2</label>
+            <input type="file" name="image2" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 3</label>
+            <input type="file" name="image3" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 4</label>
+            <input type="file" name="image4" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 5</label>
+            <input type="file" name="image5" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Նկար 6</label>
+            <input type="file" name="image6" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold text-xl mt-5 block">Մեծ նկար</label>
+            <input type="file" name="big_image" class="bg-cyan-500 border-2 border-white text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <select name="website_language" class="w-72 h-10 bg-cyan-500 border-2 border-white text-white text-center mt-10">
+                <option value="armenian">Հայերեն</option>
+                <option value="russian">Անգլերեն</option>
+                <option value="english">Ռուսերեն</option>
+            </select><br>
+            <input type="submit" value="Ավելացնել" class="w-72 h-10 mt-10 bg-white duration-300 ease-in-out hover:bg-cyan-500 border-2 border-white hover:text-white cursor-pointer text-cyan-500 text-center text-xl font-semibold">
+        </form>
+    </div>
+</div>
+
+<main class="w-screen h-screen bg-cyan-700 table text-center">
+    <a href="#" id="add_language"><button class="add_promotion_popup_btn block mt-24 md:mt-10 w-72 h-10 bg-cyan-600 text-white ml-20 md:ml-96 rounded-xl duration-500 hover:rounded-3xl ease-in-out hover:text-cyan-600 hover:bg-white"><i class="fa-solid fa-circle-plus float-left ml-5 pt-1"></i>Ավելացնել լեզու</button></a>
+    <div class="md:w-2/3 w-full h-1/2 bg-slate-700 mt-36 mx-auto">
+        <div class="w-72 h-20 bg-slate-600 block">
+            <h1 class="text-white text-3xl float-left ml-10 m-5"><i class="fa-solid fa-language"></i>Լեզուներ</h1>
+        </div>
+        <div class="w-full h-96 block overflow-y-scroll">
+            {% for i in languages %}
+            <div class="border-4 border-cyan-500 w-full h-auto">
+                <h1 class="text-white text-3xl flex"><b class="italic">Լեզու։</b> {{i.language_name}}</h1>
+                <p class="text-white flex w-full md:w-2/3"><b class="italic">Տեքստ։</b>{{i.main_text}}</p>
+                <h1 class="text-white mt-5 text-2xl">Գլխավոր նկար</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.main_image)}}" width="200" class="block mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 1</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image1)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 2</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image2)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 3</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image3)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 4</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image4)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 5</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image5)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">նկար 6</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.image6)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white mt-5 text-2xl">Մեծ նկար</h1>
+                <img src="{{url_for('static', filename='uploads/'+i.big_image)}}" width="200" class="mx-auto">
+                <hr>
+                <h1 class="text-white text-2xl mt-5"><b class="italic">Կայքի լեզուն:</b> {{i.website_language}}</h1>
+                <a href="/admin/update-language/{{i.id}}"><button class="w-72 h-8 bg-cyan-500 text-white mt-10 duration-300 ease-in-out rounded-none hover:rounded-xl hover:bg-white hover:text-cyan-500"><i class="fa-solid fa-pen-to-square"></i>Փոփոխել</button></a>
+                <a href="/admin/delete-language/{{i.id}}"><button class="w-72 h-8 bg-cyan-500 text-white mt-10 duration-300 ease-in-out rounded-none hover:rounded-xl hover:bg-white hover:text-cyan-500"><i class="fa-solid fa-trash-can"></i>Հեռացնել</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+<script>
+document.getElementById('add_language').addEventListener('click', function() {
+    document.querySelector('.add_language_popup').style.display='flex';
+});
+
+document.querySelector('.close_language_popup').addEventListener('click', function(){
+    document.querySelector('.add_language_popup').style.display='none';
+})
+</script>
+
+{% endblock %}

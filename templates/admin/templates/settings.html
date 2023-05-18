@@ -1,0 +1,30 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Settings
+{% endblock %}
+
+{% block body %}
+
+<main class="text-center w-screen h-screen bg-white">
+    <h1 class="text-black text-3xl font-semibold">Կարգավորումներ</h1>
+    <div class="bg-slate-800 md:w-1/2 w-full h-auto mx-auto mt-36 text-center">
+        <i class="fa-solid fa-gear text-white float-left m-5 text-3xl"></i>
+        <h1 class="text-white text-2xl font-semibold static mt-5">Գլխավոր էջի Կարգավորումներ</h1><br>
+        <form action="/admin/settings/main-page" method="POST" enctype="multipart/form-data">
+            <label class="text-white font-semibold block mt-10">Գլխավոր էջի նկար</label>
+            <input type="file" name="image" class="bg-cyan-500 text-center text-white" accept="image/gif, image/jpeg, image/png"><br>
+            <label class="text-white font-semibold">Գլխավոր էջի տեքստ</label><br>
+            <textarea name="main_page_text" id="" cols="30" rows="10" class="text-center text-cyan-500"></textarea><br>
+            <label class="text-white font-semibold">Գլխավոր էջի տեքստ</label><br>
+            <select name="language" class="w-72 h-8 bg-cyan-500 text-white">
+                <option value="armenian">Հայերեն</option>
+                <option value="russian">Ռուսերեն</option>
+                <option value="english">Անգլերեն</option>
+            </select><br>
+            <input type="submit" class="bg-cyan-500 text-white border-0 w-36 mt-10 h-7 duration-300 ease-in-out hover:bg-white hover:text-cyan-500 text-center cursor-pointer" value="Պահպանել">
+        </form>
+    </div> 
+</main>
+
+{% endblock %}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+
+    <title>Art House language center</title>
+
+   
+
+   
+
+</head>
+
+<body>
+
+    <header id="topheader">
+
+        <div class="header">
+
+             <div class="flags animate-left"><a href="#"><img  class="flagone" src="{{ url_for('static', filename='images/Group 240.png') }}"  width="139 px" height ="172px"alt="" id="flone" ></a>
+
+                <a href="/test-russian"><img  class="flagtwo" src="{{ url_for('static', filename='images/Group 268.png') }}"  width="139 px" height ="172px" alt=""></a>
+
+            </div>
+
+            <div class="logo animate-top">
+
+                 <a href="/home-rus"><img src="{{ url_for('static', filename='images/logo.png') }}" width="255px" height="80px" alt=""></a>
+
+
+
+           
+
+                </div>
+
+                <div id='select-container' class="animate-right ">
+
+                    <select id="dropdown" onchange="location = this.value;">
+
+             
+
+                        <option   id="optone" value='/form-armenian'  >ARMENIAN</option>
+
+                        <option   value="/form-english"  id="opttwo" ><a href="/form-english"></a>ENGLISH</a></option>
+
+                           <option value="/form-russian"  selected id="optthree">RUSSIAN</option>
+
+                   
+
+                       </select>
+
+                    <img id='dropdown-image'  src="{{ url_for('static', filename='images/globus.png') }}" />
+
+                  </div>
+
+        </div>
+
+        </div>
+
+    
+
+        <div class="wrapper effect">
+
+    
+
+            <ul class="snip1175">
+
+                
+
+                <li><a href="/about-russian" data-hover="О нас">О нас</a></li>
+
+                <li><a href="/languages-russian" data-hover="Языки">Языки</a></li>
+
+                <li><a href="/action-russian" data-hover="Акции">Акции</a></li>
+
+                <li><a href="/prices-russian" data-hover="Прайс-лист">Прайс-лист</a></li>
+
+                <li><a href="/partners-russian" data-hover="Соработники">Соработники</a></li>
+
+              </ul>
+
+           
+
+          </div>
+
+          <div id="hidemenu">
+
+            <span ><img src="{{ url_for('static', filename='images/Group 519.png') }}" alt="" class="responsiveburg " width="40px" height="30px"  onclick="openNav()"> </span>
+
+<div id="myNav" class="overon">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="{{ url_for('static', filename='images/Group 520.png') }}" alt="" class="responsiveburg" width="40px" height="30px"></a>
+
+    <div class="overon-content">
+
+        <a href="/home-rus"><img src="{{ url_for('static', filename='images/logo.png') }}"class="mobilelogo" alt=""></a>
+
+      <a href="/about-russian"><img src="{{ url_for('static', filename='images/Group 511.png') }}"  width="400px" height="70px" alt="" id="imgone"></a>
+
+      <a href="/languages-russian"><img src="{{ url_for('static', filename='images/Group 501.png') }}"  width="400px" height="70px" id="imgtwo"  alt=""></a>
+
+      <a href="/action-russian"><img src="{{ url_for('static', filename='images/Group 509.png') }}" width="400px" height="70px" id="imgthree"  alt=""></a>
+
+    
+
+      <a href="/prices-russian"><img src="{{ url_for('static', filename='images/Group 503.png') }}"  width="400px" height="70px" id="imgfour" alt="" ></a>
+
+      <a href="/partners-russian"><img src="{{ url_for('static', filename='images/Group 505.png') }}" width="400px" height="70px" id="imgfive" alt="" ></a>
+
+    </div>
+
+
+
+  </div>
+
+            
+
+            </div>
+
+       </header>
+
+   <main>
+
+  
+
+    <section class="formsend">
+
+     
+
+        <div class="arrowright">
+
+            <img src="{{ url_for('static', filename='images/Group 437.png') }}" width="600px" height="200px" alt="" class="right">
+
+            <img src="{{ url_for('static', filename='images/smtwo.png') }}" width="180px" height="180px" alt="" class="smallmes">
+
+
+
+
+
+        </div>
+
+       
+
+        <div id="forms">
+
+        
+
+            <form id="my-form" class="my-forma" action="https://formspree.io/f/xzbwkony" method="POST">
+
+                <div class="hayter"> <h2>ОТПРАВИТЬ ЗАЯВКУ</h2></div>
+
+               <div class="namephone">
+
+                <label></label><input type="text" name="name" placeholder="Имя ">
+
+                <label> </label><input type="phone" name="phone"  placeholder="Телефон">
+
+            
+
+            
+
+            
+
+            </div> 
+
+                
+
+               <div class="surnamemail">
+
+               <label></label><input type="text" name ="surname" placeholder ="Фамилия">
+
+                <label></label><input type="email" name="mail" placeholder="Email">
+
+    
+
+            </div>
+
+            <div class="selectgroups">
+
+               
+
+               <div class="custom-select">
+
+                <select class="select new-select" name="language" id="choose">
+
+                    <option disabled >Выберите курс</option>
+
+                    <option value="Английский">Английский</option>
+
+                    <option value="Немецкий">Немецкий</option>
+
+                    <option value="Китайский">Китайский</option>
+
+                    <option value="Французский">Французский</option>
+
+                    <option value="Русский">Русский</option>
+
+                    <option value="Итальянский">Итальянский</option>
+
+                    <option value="Испанский">Испанский</option>
+
+                </select></div>
+
+                <div class="custom-select">
+
+                <select class="select" name="quantity" id="choosethree">
+
+                    <option disabled >Количество занятий</option>
+
+                    <option value="3days" name="3">3 дня в неделю </option>
+
+                    <option value="2days" name="2">2 дня в неделю </option>
+
+                </select></div>
+
+                <div class="custom-select">
+
+                <select class="select " name="lessontime" id="choosetwo">
+
+                    <option disabled name="tevox"></option>
+
+                    <option value="Individual">Индивидуальный </option>
+
+                    <option value="Group">Групповой </option>
+
+                </select></div>
+
+               </div>
+
+                <input type="submit" id="my-form-button" value="Отправить"  class="view send">
+
+                <p id="my-form-status"></p>
+
+            </form>
+
+            <div class="leftarrow">
+
+                <img src="{{ url_for('static', filename='images/smone.png') }}" width="130px" height="130px" alt="" class="smallmestwo">
+
+                <img src="{{ url_for('static', filename='images/Group 438.png') }}" width="120px" height="100px"  alt="" class="left">
+
+                    </div>
+
+        </div>
+
+    
+
+        
+
+    
+
+    </section>
+
+   <!-- GetButton.io widget -->
+
+<script type="text/javascript">
+
+    (function () {
+
+        var options = {
+
+            facebook: "193801524296214", // Facebook page ID
+
+            whatsapp: "+374 77 200408", // WhatsApp number
+
+            call_to_action: "Message us", // Call to action
+
+            button_color: "#129BF4", // Color of button
+
+            position: "right", // Position may be 'right' or 'left'
+
+            order: "facebook,whatsapp", // Order of buttons
+
+        };
+
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+
+    })();
+
+</script>
+
+<!-- /GetButton.io widget -->
+
+    <footer class="f">
+
+        <div class="footer " style="margin-bottom:-150px">
+
+        <div class="footerlogo"><img src="{{ url_for('static', filename='images/logo.png') }}"  height="80px" alt=""></div>
+
+        <div class="hasce" ><p class="adress">Аbovyan St. 33, 0009, Armenia +37443543455</p>
+
+        <p class="date">2022 ART HOUSE</p></div>
+
+        <div class="iconki">
+
+          <a href="mailto:arthouselanguage@gmail.com"> <img src="{{ url_for('static', filename='images/message.png') }}"  height="22px"  alt="" ></a> 
+
+          <a   href="https://www.instagram.com/art_house_language/" target="_blank"> <img src="{{ url_for('static', filename='images/instagram.png') }}"  height="22px" id ="b" alt="" ></a>
+
+            <a   href="https://www.facebook.com/AnglerenRuserenGermanerenFranserenIspaneren" target="_blank"> <img src="{{ url_for('static', filename='images/facebook.png') }}"  height="22px" id ="c" alt="" ></a>
+
+        </div>
+
+    </div>
+
+    <section class="topsection">
+
+        <div class="arrowtotop"><a href="#topheader"><img src="{{ url_for('static', filename='images/arrowupp.png') }}" alt=""></a></div>
+
+
+
+    </section>
+
+
+
+       </footer>
+
+   
+
+    
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://tympanus.net/Development/Slicebox/js/jquery.slicebox.js"></script>
+
+ 
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://kit.fontawesome.com/9a1fc58522.js" crossorigin="anonymous"></script>
+
+
+
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/error.js') }}"></script>
+
+</body></html>

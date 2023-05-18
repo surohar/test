@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/engtest.css">
+    <title>Art House Language Center</title>
+
+</head>
+<body>
+   
+  
+
+
+
+
+
+  <div class="logo animate-top logotype"  style="text-align:center" >
+    <a href="index.html"><img src="images/logo.png" width="255px" height="80px" alt="" class="log"></a>
+</div>
+
+<div class="progresslist" id="prog"  >
+  <div class="quizArea " id="somequiz">
+   <div class="multipleChoiceQues">
+   <div class="mc_quiz">
+<div class="prog">
+    <span id="progressnum">1</span>/12</div>
+   </div>
+     <div class="my-progress">
+      
+         <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>    
+         <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
+     </div>
+     
+     <div class="quizBox">
+       <div class="marduk">
+         <div  class="mardukone"><img src="images/Group (2).png"  class="animate-left" alt="" height="600px"></div>
+         <div class="animate-right  marduktwo"><img src="images/Group (3).png" class="animate-right" alt=""  height="600px"></div></div>
+      
+      <div class="top">   <div class="question"> </div>
+       <div class="answerOptions"></div></div>
+     
+       <div class="buttonArea">
+         <button id="next" onclick="nextNum()"  class="hidden"><img src="images/arrow right.png"alt="" width="40px" height="40px" ></button>
+         <button id="submit"  class="hidden">Submit</button>
+       </div>
+     </div>
+   </div>
+   <div class="resultArea">  
+     <div class="resultPage1">
+       <div class="resultBox">
+         <h1>Result Summary</h1>
+       </div>
+       <div class="briefchart">
+         <svg height="300" width="300" id="_cir_progress">
+           <g style="margin-top:-70px">
+             <rect x="0" y="1" width="30" height="15"  fill="rgb(190, 185, 185)" />
+             <text x="32" y="14" font-size="14"  class="_text_incor">Incorrect : 12 </text>
+           </g>
+           <g>
+             <rect x="160" y="1" width="30" height="15"  fill="#006ED2" />
+             <text x="192" y="14" font-size="14" class="_text_cor">Correct : 12</text>
+          </g>          
+           <circle class="_cir_P_x" cx="150" cy="150" r="120" stroke="#A6A6A6" stroke-width="20" fill="none" onmouseover="evt.target.setAttribute('stroke', 'gray');" onmouseout="evt.target.setAttribute('stroke','gray');"></circle>
+ 
+           <circle class="_cir_P_y" cx="150" cy="150" r="120" stroke="rgb(0, 110, 210)" stroke-width="20"  stroke-dasharray="0,1000" fill="none"  onmouseover="evt.target.setAttribute('stroke', 'rgb(180, 173, 173))');" onmouseout="evt.target.setAttribute('stroke','rgb(180, 173, 173)');"></circle>
+           <text x="50%" y="50%" text-anchor="middle" stroke="none" stroke-width="1px" dy=".3em" class="_cir_Per">0%</text>
+           </svg>
+       </div>
+ 
+       <div class="resultBtns">
+         <button class="viewanswer" >View Answers</button>
+      
+        
+       </div>
+     </div>
+ 
+     <div class="resultPage2">
+       <h1>Your Result</h1>
+       
+       <div class="chartBox">
+         <canvas id="myChart" width="400" height="400"></canvas>
+       </div>
+       <button class="backBtn">Back</button>
+     </div>
+ 
+     <div class="resultPage3">
+       <h1>Your Answers</h1>
+      
+       <div class="allAnswerBox">
+         
+       </div>
+
+       <button class="backBtn">Back</button>
+       
+     </div>
+ 
+   </div>
+ </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+       <script src="https://kit.fontawesome.com/9a1fc58522.js" crossorigin="anonymous"></script>
+       <script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/engtest.js"></script>
+<script src="js/error.js"></script>
+</body>
+</html>
+
+
+
+

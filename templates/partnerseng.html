@@ -1,0 +1,393 @@
+{% extends 'base_eng.html' %}
+   {% block body %}
+
+   <main>
+
+    <div class="partner"><img src="{{ url_for('static', filename='images/CO-Workers.png') }}"   height="105" alt =""></div>
+
+   
+
+   
+
+    <div class="parentcontair">
+
+      
+      {% for i in partners %}
+      <div class="contair animate-top partners">
+
+          <img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" alt="" width="250px" height="200px" class="image">
+
+          <div class="overlay">
+
+            <div class="text"><h4>{{i.partner_name}}</h4>
+
+            <p>{{i.description}}</p></div>
+
+          </div>
+
+        </div>
+        {% endfor %}
+
+        <!-- <div class="contair animate-left">
+
+          <img src="{{ url_for('static', filename='images/Group 351.png') }}" alt="" width="250px" height="200px" class="image">
+
+          <div class="overlay">
+
+            <div class="text"><h4>"CE Armenian Round Table Fund" </h4>
+
+              <p>7 years of cooperation</p> <p>7 implemented projects</p></div>
+
+            </div>
+
+        </div>
+
+        <div class="contair animate-bottom">
+
+          <img src="{{ url_for('static', filename='images/Group 352.png') }}" alt="" width="250px" height="200px" class="image">
+
+          <div class="overlay">
+
+            <div class="text"><h4>"SOS Children's Villages Armenia" </h4>
+
+              <p>8 years of cooperation</p> <p>17 implemented projects</p></div>
+
+            </div>
+
+        </div>
+
+        <div class="contair animate-right">
+
+          <img src="{{ url_for('static', filename='images/Group 353.png') }}" alt="" width="250px" height="200px" class="image">
+
+          <div class="overlay">
+
+            <div class="text"><h4>"KRC Armenia" </h4>
+
+              <p>8 years of cooperation</p> <p>7 implemented projects</p></div>
+
+            </div>
+
+        </div></div> -->
+
+  
+
+    <!-- 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000   
+
+        <div class="parentcontair">
+
+          <div class="contair animate-bottom">
+
+              <img src="{{ url_for('static', filename='images/Group 363.png') }}" alt="" width="250px" height="200px" class="image">
+
+              <div class="overlay">
+
+                <div class="text"><h4 id="halep">"ALEP PATRIOTIC-WELFARE SOCIAL ORGANIZATION" </h4>
+
+                  <p>3 years of cooperation</p> <p>3 implemented projects</p></div>
+
+                </div>dhdjdkdkdjkdkdkidkdk
+
+            </div>
+
+            <div class="contair animate-left">
+
+              <img src="{{ url_for('static', filename='images/Group 364.png') }}" alt="" width="250px" height="200px" class="image">
+
+              <div class="overlay">
+
+                <div class="text"><h4>"Women's Support Center" </h4>
+
+                  <p>8 years of cooperation</p> <p>10 implemented projects</p></div>
+
+                </div>fdkdkfkfkfkfkfkfkfkfkfk
+
+            </div>
+
+           
+
+            <div class="contair animate-top">
+
+              <img src="{{ url_for('static', filename='images/Group 365.png') }}" alt="" width="250px" height="200px" class="image">
+
+              <div class="overlay">
+
+                <div class="text"><h4>"Red Cross" </h4>
+
+                  <p>2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                </div>gkfkfkdkdekdkdkdkdkdkkd
+
+            </div>
+
+            <div class="contair animate-right">
+
+              <img src="{{ url_for('static', filename='images/Group 366.png') }}" alt="" width="250px" height="200px" class="image">
+
+              <div class="overlay">
+
+                <div class="text"><h4>"Help House LLC" </h4>
+
+                  <p>6 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                </div>trjfkfkfklfkfkfkfkfkfkfk
+
+            </div></div>
+
+            <div class="parentcontair">
+
+              <div class="contair animate-bottom">
+
+                  <img src="{{ url_for('static', filename='images/Group 354.png') }}" alt="" width="250px" height="200px" class="image">
+
+                  <div class="overlay">
+
+                    <div class="text"><h4>"Armenian Evangelical Fellowship of America" </h4>
+
+                      <p>1 year of cooperation</p> <p>1 implemented project</p></div>
+
+                    </div>fjdkkldkdkdfkdkdkdkdkdk
+
+                </div>
+
+                <div class="contair animate-top">
+
+                  <img src="{{ url_for('static', filename='images/Group 355.png') }}" alt="" width="250px" height="200px" class="image">
+
+                  <div class="overlay">
+
+                    <div class="text"><h4>"Union of Industrialists and Businessmen of Armenia" </h4>
+
+        2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                  </div>djdkdkfkdkdkdkdkdkdk
+
+                </div>
+
+                <div class="contair animate-right">
+
+                  <img src="{{ url_for('static', filename='images/Group 357.png') }}" alt="" width="250px" height="200px" class="image">
+
+                  <div class="overlay">
+
+                    <div class="text"><h4>"World Vision" </h4>
+
+                      <p>11 years of cooperation</p> <p>11 implemented projects</p></div>
+
+                    </div>tjkfkfkfkfkfkfkfk
+
+                </div>
+
+                <div class="contair animate-left">
+
+                  <img src="{{ url_for('static', filename='images/Group 358.png') }}" alt="" width="250px" height="200px" class="image">
+
+                  <div class="overlay">
+
+                    <div class="text"><h4>"Partnership and Education NGO" </h4>
+
+                      <p>3 years of cooperation</p> <p>3 implemented projects</p></div>
+
+                    </div>rjdjdkdkdkdkdkdkdkdk
+
+                </div></div>
+
+    
+
+              <div class="parentcontair">
+
+                <div class="contair animate-right">
+
+                    <img src="{{ url_for('static', filename='images/Group 359.png') }}" alt="" width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>"French-Armenian Development Fund" </h4>
+
+                        <p>5 years of cooperation</p> <p>15 implemented projects</p></div>
+
+                      </div>ddhfjfkjfjkfjfjfjfjfjf
+
+                  </div>
+
+                  <div class="contair animate-top">
+
+                    <img src="{{ url_for('static', filename='images/Group 360.png') }}" alt="" width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>"State Employment Agency" </h4>
+
+                        <p>2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                      </div>hjhjjhjjjjhjhj
+
+                  </div>
+
+                  <div class="contair animate-left">
+
+                    <img src="{{ url_for('static', filename='images/Group 361.png') }}" alt="" width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>"Near East Foundation" </h4>
+
+                        <p>2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                      </div>fjfjkfjfjfjfjfjfj
+
+                  </div>
+
+                  <div class="contair animate-bottom">
+
+                    <img src="{{ url_for('static', filename='images/Group 362.png') }}" alt="" width="250px" height="200px" class="image">
+
+                    <div class="overlay">
+
+                      <div class="text"><h4>"My Step Foundation" </h4>
+
+                        <p>1 year of cooperation</p> <p>1 implemented project</p></div>
+
+                      </div>jdkdkdkdkkdkdkdkdkdkdk
+
+                  </div>
+
+                 </div>
+
+                 <div class="parentcontair">
+
+                  <div class="contair animate-right">
+
+                      <img src="{{ url_for('static', filename='images/Group 405.png') }}" alt="" width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>"HOP PAP Representation" </h4>
+
+                          <p>3 years of cooperation</p> <p>3 implemented projects</p></div>
+
+                        </div>fjfjfkfkfkfkfkfkfk
+
+                    </div>
+
+                    <div class="contair animate-top">
+
+                      <img src="{{ url_for('static', filename='images/Group 409.png') }}" alt="" width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>"Tufenkian Foundation" </h4>
+
+                          <p>2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                        </div>gjfkdkdkdkdkdkdkdkdk
+
+                    </div>
+
+                    <div class="contair animate-left">
+
+                      <img src="{{ url_for('static', filename='images/Group 401.png') }}" alt="" width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>"Paros NGO jointly Save the Children in Armenia" </h4>
+
+                          <p>1 year of cooperation</p> <p>1 implemented project</p></div>
+
+                        </div>fgjfkfkfkfkfkfkfk
+
+                    </div>
+
+                    <div class="contair animate-bottom">
+
+                      <img src="{{ url_for('static', filename='images/Group 402.png') }}" alt="" width="250px" height="200px" class="image">
+
+                      <div class="overlay">
+
+                        <div class="text"><h4>"Holy Trinity Church" </h4>
+
+                          <p>2 years of cooperation</p> <p>2 implemented projects</p></div>
+
+                        </div>dfjdjdjdkdkdkdkdk
+
+                    </div>
+
+                   </div>
+
+            
+
+                   <div class="parentcontair pb">
+
+                    <div class="contair animate-right">
+
+                        <img src="{{ url_for('static', filename='images/Group 403.png') }}" alt="" width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>"SOAR Armenia Charitable Company"</h4>
+
+                            <p>3 years of cooperation <p></p>3 implemented projects</p></div>
+
+                          </div>fjdkdkldksdkks
+
+                      </div>
+
+                      <div class="contair animate-top">
+
+                        <img src="{{ url_for('static', filename='images/Group 408.png') }}" alt="" width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>"Man in need" </h4>
+
+                            <p>5 years of cooperation <p></p>11 implemented projects</p></div>
+
+                          </div>dfjkdkdkdkdkldkdkdk
+
+                      </div>
+
+                      <div class="contair animate-left">
+
+                        <img src="{{ url_for('static', filename='images/Group 406.png') }}" alt="" width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>QUALIFIED SMART ESSENTIAL </h4>
+
+                            <p>4 years of cooperation <p></p>4 implemented projects</p></div>
+
+                          </div>fjkdkdkdkdkdkdkdk
+
+                      </div>
+
+                      <div class="contair animate-bottom">
+
+                        <img src="{{ url_for('static', filename='images/Group 407.png') }}" alt="" width="250px" height="200px" class="image">
+
+                        <div class="overlay">
+
+                          <div class="text"><h4>"Language International and Open Abroad School" </h4>
+
+                            <p>2 years of cooperation <p></p>2 implemented projects</p></div>
+
+                          </div>fcldxl;slslsalsls
+
+                      </div>
+
+                     </div> -->
+
+            
+
+                   
+
+                        </div>
+
+                       </div>
+
+                       {% include 'contact_form_section_eng.html' %}
+
+                    <p id="my-form-status" class="status"></p>
+
+                   </main>
+
+                {% endblock %}

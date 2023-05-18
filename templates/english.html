@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block body %}
+   <main>
+
+    <div  class="englishgroup">
+
+        <div class="english animate-left ">
+
+             <img src="{{url_for('static', filename='images/eng.png')}}" height="700px" alt="" >
+
+        </div > 
+
+        <div class="engtext animate-right">
+
+<p>Լեզվի ուսուցումը նույնպես արվեստ է...<br>
+
+   Անգլերենը համարվում է աշխարհի ամենագործածական լեզուն, որի իմացությունը բացում է Ձեր առջև բոլոր դռները:
+
+    Արտ Հաուս ուսումնական կենտրոնը առաջարկում է խոսակցական անգլերենի արագացված դասընթացներ, լեզվի գերազանց իմացություն, որն այսօր համարվում է հաջողության գրավականը: Կազմակերպում են նաև մասնագիտական անգլերենի դասընթացներ ՝
+
+    <ul class="list">
+
+    
+
+    <li>TOEFL</li>	
+
+   <li>IELTS </li>
+
+    <li>Բիզնես</li>
+
+    <li>Բժշկական</li>
+
+    <li>Իրավաբանական</li>
+
+    <li>Տնտեսագիտական</li>
+
+</ul></p>
+
+     <br>
+
+   <p>Դասերը վարում են բարձրակարգ մասնագետներ՝ նորագույն մեթոդիկայով, շաբաթական 3 պարապմունք 90 րոպե տևողությամբ: Առաջին պարապմունքն անվճար է: </p> 
+
+     <ul class="list">
+
+      <li>Մասնագիտական տերմինաբանություն, արտահայտություններ, երկխոսություններ անգլերեն և հայերեն տարբերակներով</li>
+
+      <li>Կարճ ֆիլմերի դիտում և քննարկում</li>
+
+      <li>Գրականության, քերականության ուսումնասիրություն՝ վարժությունների, առաջադրանքների, թարգմանությունների միջոցով</li>
+
+      <li>Ակտիվ քննարկումներ, տեքստերի վերարտադրում անգլերենով</li>
+
+      <li>Բանավոր և գրավոր խոսքի զարգացում դիմորդների համար</li>
+
+      <li>Ինտենսիվ խոսակցական դասընթացներ</li>
+
+     </ul>
+
+    	
+
+    </p>
+
+        </div>
+
+    </div>
+
+<section class="pictures">
+
+    <div class="aroryaone ">
+
+        <div><img src="{{url_for('static', filename='images/picone.jpg')}}"      alt=""  height="350px"></div>
+
+        <div class="picsecond"><img src="{{url_for('static', filename='images/pictwo.jpg')}}"  alt="" height="430px" ></div>
+
+        <div><img src="{{url_for('static', filename='images/picthree.jpg')}}"  height="350px" ></div>
+
+    </div>
+
+    <div class="aroryaone bd">
+
+        <div><img src="{{url_for('static', filename='images/picfour.jpg')}}"  height="450px"    alt=""></div>
+
+        <div class="margpic" ><img src="{{url_for('static', filename='images/picfive.jpg')}}"   height="390px"  id="margpic" alt=""></div>
+
+        <div><img src="{{url_for('static', filename='images/picseven.jpg')}}"  height="450px" alt="" ></div>
+
+    </div>
+
+    <div class="fullpic animate-right">
+
+        <img src="{{url_for('static', filename='images/fullpic.jpg')}}" height="570" alt="">
+
+    </div></section>
+
+    {% include 'contact_form_section.html' %}
+
+    <p id="my-form-status" class="status"></p>
+
+   </main>
+
+{% endblock %}

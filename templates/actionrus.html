@@ -1,0 +1,32 @@
+{% extends 'base_rus.html' %}
+  
+
+{% block body %}
+
+<main>
+
+
+        {% for r in promotions %}
+        <div class="actgroup">
+            <div class="animate-left"><img src="{{ url_for('static', filename='uploads/'+r.image_name) }}" width="425" height="600" alt=""></div>
+            <!-- <div class="animate-right"><img src="{{ url_for('static', filename='images/Group 276.png') }}"  width="425" height="600" alt=""></div> -->
+        </div>
+        {% endfor %}
+
+        <!-- <div class="actgrouptwo">
+
+            <div class="animate-right"><img src="{{ url_for('static', filename='images/Group 278.png') }}" width="425" height="600" alt=""></div>
+
+            <div class="animate-left"><img src="{{ url_for('static', filename='images/Group 279.png') }}"  width="425" height="600" alt=""></div>
+
+        </div> -->
+
+        
+
+        {% include 'contact_form_section_rus.html' %}
+
+        <p id="my-form-status" class="status"></p>
+
+       </main>
+
+       {% endblock %}

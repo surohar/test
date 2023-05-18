@@ -1,0 +1,24 @@
+{% extends 'base_eng.html' %}
+     
+       {% block body %}
+
+       <main>
+       <div class="langgroup">
+         {% for i in languages %}
+        <div class="language_single"><a href="/languages-english/single/{{i.id}}"><img src="{{ url_for('static', filename='uploads/'+i.main_image) }}" alt="" height="456px"></a></div>
+        {% endfor %}
+      </div>
+
+     
+
+
+       {% include 'contact_form_section_eng.html' %}
+
+
+
+
+    <p id="my-form-status" class="status"></p>
+
+   </main>
+
+   {% endblock %}

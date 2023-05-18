@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+    {% block body %}
+    <main>
+
+        <section class="aboutus">
+
+            <div class="about">
+
+                <div class="maintextertwo ">
+
+                    <div class="textabout texttwo animate-left">
+
+                        <h1 class="we">Մեր մասին</h1>
+
+                        <div class="abouttext abouttexttwo ">
+
+                            <p>Բարի գալուստ Արտ Հաուս լեզվի կենտրոն!!!</p>
+
+                            <p>2009թ սկսած՝ մենք դասավանդում ենք օտար լեզուներ տարբեր տարիքային խմբերի
+
+                                համար,կատարելագործում ու մշակում նոր,ինտերակտիվ մեթոդիկաներ՝փորձելով հնարավորինս հեշտ ու
+
+                                արագ տալ հիմնավոր գիտելիքներ՝ խոսակցականից մինչև տեխնիկական ,մասնագիտական մակարդակ կամ
+
+                                ըստ անհրաժեշտության՝միջազգային տարբեր քննությունների նախապատրաստում և աջակցում՝սեղմ
+
+                                ժամկետներում։</p><br>
+
+                            <p> Անհատակա՞ն,թե՞ խմբակային տարբերակ կընտրեք դուք՝միևնույն է,կստանաք հատուկ մոտեցում մեր
+
+                                բարձրակարգ մասնագետների կողմից,որոնք իրենց տարիների աշխատանքային փորձով,գիտելիքներով
+
+                                կգոհացնեն նույնիսկ ամենաքմահաճ ուսանողին,իսկ արդյունքը կլինի ձեր հաջողության
+
+                                գրավականը։Չէ՞ որ օտար լեզվի իմացությունը բազմապատկում է հնարավորություններն ու
+
+                                հաջողությունը,մասնագիտական վերելք ապահովում։</p><br>
+
+                            <p>Նախապատվություն տալով Արտ Հաուս լեզվի կենտրոնին՝ դուք կունենաք՝<br>
+
+                                1 .Փորձառու ուսուցիչներ<br>
+
+                                2.Անհատական մոտեցում՝փոքրիկ խմբերով,ինչպես նաև ընտանեկան փաթեթով սովորելու
+
+                                հնարավորություն<br>
+
+                                3.Գին-որակ համադրություն<br>
+
+                                4.Անվճար առաջին դասի հնարավորություն և օնլայն և օֆլայն տարբերակում</p><br>
+
+                            <p>Դարձեք մրցունակ ցանկացած ոլորտում՝ կատարելագործելով օտար լեզվի մակարդակը Արտ Հաուս լեզվի
+
+                                կենտրոնում!!!</p><br>
+
+                        </div>
+
+                        <div class="pass">
+
+
+
+                            <button class="more animate-right"><a href="test.html" class="showmore ">Անցնել
+
+                                    թեստ</a></button>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+        </section>
+
+ <section class="team">
+
+    {% for i in teachers_list %}
+            <div class="teachers teachersone">
+
+                <div class="containerer">
+
+ <div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='uploads/'+i.image_name) }}" width="300px" height="380px" alt="">
+
+</div>     </div>     </div>              
+
+<div class="slide slide2"><div class="content"> <h3>{{i.name}}</h3> <p>{{i.language}}</p> </div>
+
+</div></div></div>
+</div>
+{% endfor %}
+
+<!-- <div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachertwo.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3>Արփինե Ոսկանյան </h3><p>անգլերեն</p>
+
+</div></div></div></div>
+
+<div class="containerer"> <div class="card"> <div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherthree.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+ <div class="slide slide2"> <div class="content"><h3>Գայանե Գեոլեցյան</h3> <p>ռուսերեն</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherfour.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3>Լիլիթ Արզումանյան</h3> <p>անգլերեն</p>
+
+</div></div></div></div></div>
+
+<div class="teachers"><div class="containerer">  <div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachereight.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div>
+
+<div class="slide slide2"><div class="content"><h3> Ելենա Եփրեյան</h3> <p>չինարեն</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teacherfive.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"><h3>Մայրանուշ Էլոյան </h3> <p>գերմաներեն</p>
+
+ </div> </div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"> <div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachersix.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"><h3>     Սառա Սալումյան </h3> <p>անգլերեն</p> </div></div> </div>
+
+</div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"><img src="{{ url_for('static', filename='images/teacherseven.jpg') }}" width="300px" height="380px" alt="">
+
+ </div></div> </div>
+
+ <div class="slide slide2"><div class="content"><h3>Տիգրանուհի Բոյաջյան </h3> <p>անգլերեն</p>
+
+ </div></div> </div></div></div>
+
+ <div class="teachers">
+
+     <div class="containerer"><div class="card"><div class="slide slide1"><div class="content"><div class="icon"><img src="{{ url_for('static', filename='images/teachernine.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div></div><div class="slide slide2"><div class="content"> <h3>Էդիտա Շահինյան</h3> <p>իտալերեն</p>
+
+ </div></div> </div> </div> <div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"><img src="{{ url_for('static', filename='images/teacherten.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div></div>
+
+<div class="slide slide2"><div class="content"> <h3>Թամարա Գալստյան </h3> <p>իսպաներեն</p>
+
+</div></div></div></div>
+
+<div class="containerer"><div class="card"><div class="slide slide1"><div class="content"> <div class="icon"> <img src="{{ url_for('static', filename='images/teachereleven.jpg') }}" width="300px" height="380px" alt="">
+
+</div> </div> </div>
+
+ <div class="slide slide2"><div class="content"><h3>Լուսինե Աշկարյան </h3> <p>անգլերեն</p>
+
+ </div> </div> </div></div>
+
+<div class="containerer"> <div class="card"><div class="slide slide1"> <div class="content"> <div class="icon"> <img src="{{ url_for('static', filename='images/teachertwelve.jpg') }}" width="300px" height="380px" alt="">
+
+</div></div> </div>
+
+<div class="slide slide2"> <div class="content"> <h3>Նունե Խաժակյան </h3>  <p>ֆրանսերեն</p></div>
+
+</div></div></div></div> -->
+
+
+
+</section>
+
+
+
+ <section class="videos">
+
+            <div class="animate-left"><iframe width="560" height="315" src="https://www.youtube.com/embed/IY_FDy4y2fM"
+
+                    title="YouTube video player" frameborder="0"
+
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+                    allowfullscreen></iframe></div>
+
+            <div class="animate-right"><iframe width="560" height="315" src="https://www.youtube.com/embed/TINCEHV-z-I"
+
+                    title="YouTube video player" frameborder="0"
+
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+                    allowfullscreen></iframe></div>
+
+
+
+        </section>
+
+        {% include 'contact_form_section.html' %}
+
+        <p id="my-form-status" class="status"></p>
+
+    </main>
+
+    {% endblock %}

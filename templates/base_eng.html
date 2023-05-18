@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+
+    <title>Art House language center</title>
+
+</head>
+
+<body>
+
+    <header id="topheader">
+
+        <div class="header">
+
+             <div class="flags animate-left"><a href="/form-english"><img  class="flagone" src="{{ url_for('static', filename='images/Group 484.png') }}"  width="139 px" height ="172px"alt="" id="flone" ></a>
+
+                <a href="/test-english"><img  class="flagtwo" src="{{ url_for('static', filename='images/Group 485.png') }}"  width="139 px" height ="172px" alt=""></a>
+
+            </div>
+
+            <div class="logo animate-top">
+
+                 <a href="/home-eng"><img src="{{ url_for('static', filename='images/logo.png') }}" width="255px" height="80px" alt=""></a>
+
+
+
+           
+
+                </div>
+
+                <div id='select-container' class="animate-right ">
+
+                    <select id="dropdown" onchange="location = this.value;">
+
+             
+
+                        <option   id="optone" value='/home'  >ARMENIAN</option>
+
+                        <option   value="/home-eng" selected  id="opttwo" ><a href="/form-english"></a>ENGLISH</a></option>
+
+                           <option value="/home-rus" id="optthree">RUSSIAN</option>
+
+                   
+
+                       </select>
+
+                    <img id='dropdown-image'  src="{{ url_for('static', filename='images/globus.png') }}" />
+
+                  </div>
+
+        </div>
+
+        </div>
+
+    
+
+        <div class="wrapper effect">
+
+    
+
+            <ul class="snip1175">
+
+                
+
+                <li><a href="/about-english" data-hover="About us">About us</a></li>
+
+                <li><a href="/languages-english" data-hover="Languages">Languages</a></li>
+
+                <li><a href="/action-english" data-hover="Promotions">Promotions</a></li>
+
+                <li><a href="/prices-english" data-hover="Pricelist">Pricelist</a></li>
+
+                <li><a href="/partners-english" data-hover="Co-Workers">Co-workers</a></li>
+
+              </ul>
+
+           
+
+          </div>
+
+          <div id="hidemenu">
+
+            <span ><img src="{{ url_for('static', filename='images/Group 519.png') }}" alt="" class="responsiveburg " width="40px" height="30px"  onclick="openNav()"> </span>
+
+<div id="myNav" class="overon">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="{{ url_for('static', filename='images/Group 520.png') }}" alt="" class="responsiveburg" width="40px" height="30px"></a>
+
+    <div class="overon-content">
+
+        <a href="/home-eng"><img src="{{ url_for('static', filename='images/logo.png') }}"class="mobilelogo" alt=""></a>
+
+      <a href="/about-english"><img src="{{ url_for('static', filename='images/Group 512.png') }}"  width="400px" height="70px" alt="" id="imgone"></a>
+
+      <a href="/languages-english"><img src="{{ url_for('static', filename='images/Group 502.png') }}"  width="400px" height="70px" id="imgtwo"  alt=""></a>
+
+      <a href="/action-english"><img src="{{ url_for('static', filename='images/Group 510.png') }}" width="400px" height="70px" id="imgthree"  alt=""></a>
+
+    
+
+      <a href="/prices-english"><img src="{{ url_for('static', filename='images/Group 504.png') }}"  width="400px" height="70px" id="imgfour" alt="" ></a>
+
+      <a href="/partners-english"><img src="{{ url_for('static', filename='images/Group 506.png') }}" width="400px" height="70px" id="imgfive" alt="" ></a>
+
+    </div>
+
+
+
+  </div>
+
+            
+
+            </div>
+
+       </header>
+
+
+
+    {% block body %} {% endblock %}
+
+  <!-- GetButton.io widget -->
+
+<script type="text/javascript">
+
+    (function () {
+
+        var options = {
+
+            facebook: "193801524296214", // Facebook page ID
+
+            whatsapp: "+374 77 200408", // WhatsApp number
+
+            call_to_action: "Message us", // Call to action
+
+            button_color: "#129BF4", // Color of button
+
+            position: "right", // Position may be 'right' or 'left'
+
+            order: "facebook,whatsapp", // Order of buttons
+
+        };
+
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+
+    })();
+
+</script>
+
+<!-- /GetButton.io widget -->
+
+   <footer>
+
+    <div class="footer">
+
+    <div class="footerlogo"><img src="{{ url_for('static', filename='images/logo.png') }}"  height="80px" alt=""></div>
+
+    <div class="hasce" ><p class="adress">Аbovyan St. 33, 0009, Armenia +37443543455</p>
+
+    <p class="date">2022 ART HOUSE</p></div>
+
+    <div class="iconki">
+
+        <a href="mailto:arthouselanguage@gmail.com"> <img src="{{ url_for('static', filename='images/message.png') }}"  height="22px"  alt="" ></a> 
+
+      <a href="https://www.instagram.com/art_house_language/"> <img src="{{ url_for('static', filename='images/instagram.png') }}"  height="22px" id ="b" alt="" ></a>
+
+        <a href="https://www.facebook.com/AnglerenRuserenGermanerenFranserenIspaneren"> <img src="{{ url_for('static', filename='images/facebook.png') }}"  height="22px" id ="c" alt="" ></a>
+
+    </div>
+
+</div>
+
+
+
+   </footer>
+
+   <section class="topsection">
+
+    <div class="arrowtotop"><a href="#topheader"><img src="{{ url_for('static', filename='images/arrowupp.png') }}" alt=""></a></div>
+
+
+
+</section>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <script src="https://tympanus.net/Development/Slicebox/js/jquery.slicebox.js"></script>
+
+
+
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+   <script src="https://kit.fontawesome.com/9a1fc58522.js" crossorigin="anonymous"></script>
+
+   <script src="js/form.js"></script>
+
+ 
+
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+   <script src="{{ url_for('static', filename='js/error.js') }}"></script>
+
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base_eng.html' %}
+
+       {% block body %}
+    <main>
+
+        <div class="choice"><img src="{{ url_for('static', filename='images/langeng.png') }}" alt="" width="500px"></div>
+
+        <div class="testone">
+
+            
+
+            <div class="eng" ><a href="/quiz-armenian" ><img  src= "{{ url_for('static', filename='images/Group (4).png') }}"  alt=""  style="border-radius:50%" height="150px"></a></div>
+
+            <div><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/2 (2).png') }}"   alt=""   height="150px"></a></div>
+
+            <div><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/3 (1).png') }}"   alt=""  height="150px"></a></div>
+
+            <div class="chin"><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/4.png') }}" alt=""  height="150px"></a></div>
+
+        </div>
+
+        <div class="testtwo">
+
+            <div class="spanish"><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/5 (1).png') }}"   alt="" height="150px"></a></div>
+
+            <div class="german"><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/6.png') }}" alt=""   height="150px"></a></div> 
+
+            <div class="italian"><a href="/quiz-armenian"><img src="{{ url_for('static', filename='images/7.png') }}" alt=""  height="150px"></a></div> 
+
+        </div>
+
+
+
+
+
+
+
+        {% include 'contact_form_section.html' %}
+
+       </main>
+
+    {% endblock %}
+
+   

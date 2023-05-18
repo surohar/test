@@ -1,0 +1,94 @@
+{% extends 'base admin.html' %}
+
+{% block title %}
+Pricelist
+{% endblock %}
+
+{% block body %}
+
+<div class="add_price_popup hidden w-full h-full absolute bg-slate-700/60 justify-center items-center">
+    <div class="text-center add_price_popup_content overflow-y-scroll md:h-2/3 md:w-1/2 w-96 h-96 bg-cyan-600 rounded-xl">
+        <i class="fa-regular close_price_popup fa-circle-xmark text-white text-2xl float-left m-2 flex duration-500 ease-in-out  hover:text-cyan-500 fixed"></i>
+        <h1 class="text-white text-3xl">Ավելացնել գին</h1>
+        <label class="text-white text-xl font-semibold block mt-20">Դասընթաց</label>
+        <input type="text" class="w-72 h-8 rounded-3xl text-center bg-white text-cyan-500"><br>
+        <label class="text-white text-xl font-semibold block mt-10">Խմբային</label>
+        <input type="number" class="w-72 h-8 rounded-3xl text-center bg-white text-cyan-500"><br>
+        <label class="text-white text-xl font-semibold block mt-10">Անհատական</label>
+        <input type="number" class="w-72 h-8 rounded-3xl text-center bg-white text-cyan-500"><br>
+        <label class="text-white text-xl font-semibold block mt-10">Տևողություն Խմբային/Անհատական</label>
+        <input type="text" class="w-72 h-8 rounded-3xl text-center bg-white text-cyan-500"><br>
+        <label class="text-white text-xl font-semibold block mt-10">Ժամեր Խմբային/Անհատական</label>
+        <input type="text" class="w-72 h-8 rounded-3xl text-center bg-white text-cyan-500"><br>
+        <input type="submit" value="Ավելացնել" class="w-60 h-8 bg-cyan-500 text-white mt-20 duration-300 ease-in-out hover:text-cyan-500 hover:bg-white">
+    </div>
+</div>
+
+<main class="bg-emerald-600/60 w-screen h-screen text-center align-center">
+    <h1 class="text-white flex text-5xl ml-96 pt-10 font-bold">Գնացուցակ</h1>
+    <div class="w-9/12 text-center block h-32 mt-20 bg-cyan-500 ml-96">
+    <a href="#" id="add_price"><button class="w-72 h-10 bg-white text-cyan-500 font-semibold duration-500 ease-in-out hover:bg-cyan-600 hover:text-white mt-10"><i class="fa-solid fa-circle-plus float-left pl-2 pt-1"></i>Ավելացնել</button></a>
+    </div>
+    <div class="w-9/12 text-center block h-1/2 bg-white ml-96">
+        <table class="w-full border-separate border-cyan-500 border-solid">
+            <tr class="text-sm w-full">
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Դասընթաց</th>
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Խմբային</th>
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Անհատական</th>
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Տևողություն Խմբային/Անհատական</th>
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Ժամեր Խմբային/Անհատական</th>
+                <th class="border-2 bg-cyan-500 text-white border-cyan-500 border-solid">Գործողություն</th>
+            </tr>
+
+            <tr class="text-sm w-full">
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Դասընթաց</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Խմբային</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Տևողություն Խմբային/Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Ժամեր Խմբային/Անհատական</td>
+                <td class="border-2 bg-rose-600 text-white border-rose-600 border-solid duration-300 ease-in-out cursor-pointer hover:bg-white hover:text-rose-600"><i class="fa-solid fa-trash float-left pt-1 pl-1"></i>Հեռացնել</td>
+            </tr>
+
+            <tr class="text-sm w-full">
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Դասընթաց</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Խմբային</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Տևողություն Խմբային/Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Ժամեր Խմբային/Անհատական</td>
+                <td class="border-2 bg-rose-600 text-white border-rose-600 border-solid duration-300 ease-in-out cursor-pointer hover:bg-white hover:text-rose-600"><i class="fa-solid fa-trash float-left pt-1 pl-1"></i>Հեռացնել</td>
+            </tr>
+
+            <tr class="text-sm w-full">
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Դասընթաց</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Խմբային</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Տևողություն Խմբային/Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Ժամեր Խմբային/Անհատական</td>
+                <td class="border-2 bg-rose-600 text-white border-rose-600 border-solid duration-300 ease-in-out cursor-pointer hover:bg-white hover:text-rose-600"><i class="fa-solid fa-trash float-left pt-1 pl-1"></i>Հեռացնել</td>
+            </tr>
+
+            <tr class="text-sm w-full">
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Դասընթաց</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Խմբային</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Տևողություն Խմբային/Անհատական</td>
+                <td class="border-2 bg-cyan-600 text-white border-cyan-600 border-solid">Ժամեր Խմբային/Անհատական</td>
+                <td class="border-2 bg-rose-600 text-white border-rose-600 border-solid duration-300 ease-in-out cursor-pointer hover:bg-white hover:text-rose-600"><i class="fa-solid fa-trash float-left pt-1 pl-1"></i>Հեռացնել</td>
+            </tr>
+
+        </table>
+    </div>
+</main>
+
+
+<script>
+document.getElementById('add_price').addEventListener('click', function() {
+    document.querySelector('.add_price_popup').style.display='flex';
+});
+
+document.querySelector('.close_price_popup').addEventListener('click', function(){
+    document.querySelector('.add_price_popup').style.display='none';
+})
+</script>
+
+{% endblock %}
